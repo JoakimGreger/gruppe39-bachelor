@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -10,24 +11,49 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.joakim.ceapp.MainActivity">
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/oneTextView"
+        app:srcCompat="@drawable/happy"
+        android:id="@+id/lowImg"
+        android:layout_alignTop="@+id/medImg"
+        android:layout_alignParentStart="true"
+        android:scaleX="1"
+        android:scaleY="1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/full"
+        android:id="@+id/fullImg"
         android:layout_above="@+id/buttonButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="189dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/medium"
+        android:id="@+id/medImg"
+        android:layout_alignTop="@+id/fullImg"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Hva synes du?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="119dp"
-        android:alpha="100"
-        android:textColor="@color/colorAccent" />
+        android:layout_marginTop="80dp"
+        android:id="@+id/resultTxt" />
 
     <Button
-        android:text="Click me bruh!"
+        android:text="Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="176dp"
         android:id="@+id/buttonButton"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="32dp" />
 
 </RelativeLayout>
