@@ -11,49 +11,22 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.joakim.ceapp.MainActivity">
 
-    <ImageView
+    <TextView
+        android:text="Velkommen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/happy"
-        android:id="@+id/lowImg"
-        android:layout_alignTop="@+id/medImg"
-        android:layout_alignParentStart="true"
-        android:scaleX="1"
-        android:scaleY="1" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/full"
-        android:id="@+id/fullImg"
-        android:layout_above="@+id/buttonButton"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="189dp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/medium"
-        android:id="@+id/medImg"
-        android:layout_alignTop="@+id/fullImg"
+        android:layout_marginTop="80dp"
+        android:id="@+id/resultTxt"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:text="Hva synes du?"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:id="@+id/resultTxt" />
-
     <Button
-        android:text="Button"
+        android:text="Start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/buttonButton"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="32dp" />
+        android:layout_below="@+id/resultTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
 
 </RelativeLayout>
