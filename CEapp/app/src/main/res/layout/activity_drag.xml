@@ -20,11 +20,30 @@
         android:id="@+id/dirTxt" />
 
     <ImageView
+        android:layout_width="1000px"
+        android:layout_height="wrap_content"
+        android:id="@+id/smileyImg"
+        app:srcCompat="@mipmap/neutral_smiley"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Ferdig"
+        android:id="@+id/doneBtn"
+        android:background="#202026"
+        android:textColor="#88898A"
+        android:layout_height="35dp"
+        android:layout_width="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Velg det smilefjeset du selv synes representerer din opplevelse med å dra fingeren oppover eller nedover på skjermen. trykk så på ferdig når du er ferdig."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:id="@+id/smileyImg"
-        android:layout_below="@+id/dirTxt"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@mipmap/neutral_smiley" />
+        android:id="@+id/innholdTxt" />
 </RelativeLayout>
