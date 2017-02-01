@@ -9,14 +9,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.io.File;
 
 import org.w3c.dom.Text;
 
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.lang.reflect.Array;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -83,29 +88,31 @@ public class SecondActivity extends AppCompatActivity {
         doneButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick (View v) {
-                storeData("ID=1, Svar="+i);
+                long date = System.currentTimeMillis();
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                String dateString = sdf.format(date);
+                storeData(dateString + "," +i); // Lagrer svaret med dato og svar nummer
             }
         });
     }
             public void storeData(String data){
+                String linebreak = System.getProperty("line.separator");
                 final File path = Environment.getExternalStoragePublicDirectory
                         (
-                                Environment.DIRECTORY_DCIM + "/CEappData/" //Hvor dataen lagres
+                                Environment.DIRECTORY_DOWNLOADS + "/CEdata/" //Hvor dataen lagres
                         );
                 if (!path.exists()){ // sjekker om mappen finnes
                     path.mkdirs(); // lager den hvis ikke
                 }
-                final File file = new File(path, "CEdata.txt");
+                //final File file = new File(path, "CEdata.csv"); //navn på fil
+                File file = new File(path,"CEdata.csv");
                 try{
                     file.createNewFile();
-                    FileOutputStream fOut = new FileOutputStream(file);
-                    OutputStreamWriter myOutWriter = new OutputStreamWriter(fOut);
-                    myOutWriter.append(data);
-
-                    myOutWriter.close();
-
-                    fOut.flush();
-                    fOut.close();
+                    FileWriter writer = new FileWriter(file, true);
+                    writer.append(data + linebreak);
+                    writer.flush();
+                    writer.close();
+                    Toast.makeText(this, "Data har blitt lagret, takk for svar:)", Toast.LENGTH_SHORT).show();
                 }
                 catch (IOException e){
                     Log.e("Exception", "File write failed: " + e.toString());
