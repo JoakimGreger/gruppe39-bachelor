@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void switchActivity(){
-        Intent intent = new Intent(this, SecondActivity.class);
+        Intent intent = new Intent(this, DragActivity.class);
         startActivity(intent);
     }
 }
