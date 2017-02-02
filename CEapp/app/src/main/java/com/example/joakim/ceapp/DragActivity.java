@@ -32,11 +32,11 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
     int opp;
     int ned;
     int smileys[] = {
-            R.mipmap.frown_smiley,
-            R.mipmap.sad_smiley,
-            R.mipmap.neutral_smiley,
-            R.mipmap.smile_smiley,
-            R.mipmap.happy_smiley
+            R.drawable.ic_madface,
+            R.drawable.ic_sadface,
+            R.drawable.ic_neutralface,
+            R.drawable.ic_smileface,
+            R.drawable.ic_happyface
     };
 
     @Override
@@ -47,7 +47,7 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
         doneBtn = (Button) findViewById(R.id.doneBtn);
         detector = new GestureDetector(this, this);
         smileyImg = (ImageView) findViewById(R.id.smileyImg);
-        smileyImg.setImageResource(R.mipmap.neutral_smiley);
+        smileyImg.setImageResource(R.drawable.ic_neutralface);
 
 
         doneBtn.setOnClickListener(new View.OnClickListener(){
@@ -87,10 +87,6 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
         finish();
     }
 
-
-
-    private static final int SWIPE_MIN_DISTANCE = 120;
-    private static final int SWIPE_THRESHOLD_VELOCITY = 200;
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         return detector.onTouchEvent(event);
