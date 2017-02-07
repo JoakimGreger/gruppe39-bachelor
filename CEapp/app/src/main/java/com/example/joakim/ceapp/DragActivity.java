@@ -11,6 +11,8 @@ import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -32,6 +34,7 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
     GestureDetector detector;
     ImageView smileyImg;
 
+    // div variabler som blir brukt
     int i = 2;
     int qOne;
     int qTwo;
@@ -50,13 +53,16 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drag);
 
+        //div knapper og tekstfelt som blir brukt
         innholdTxt = (TextView) findViewById(R.id.innholdTxt);
         nextBtn = (Button)findViewById(R.id.nextBtn);
         doneBtn = (Button) findViewById(R.id.doneBtn);
         detector = new GestureDetector(this, this);
         smileyImg = (ImageView) findViewById(R.id.smileyImg);
+
         smileyImg.setImageResource(R.drawable.ic_neutralface);
 
+        //Gjemmer nextBtn og viser doneBtn
         nextBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View v) {
@@ -67,6 +73,7 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
             }
         });
 
+        //Lagrer data og setter en score onClick
         doneBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick (View v) {
@@ -83,9 +90,11 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
 
     public void storeScore(Integer score){
 
+        //Henter tidliger score hvis den finnes
         SharedPreferences startscore = this.getSharedPreferences("qScore", Context.MODE_PRIVATE);
         int firstscore = startscore.getInt("qScore", 0);
 
+        //Lagrer tidligere score + nye score som kan hentes på alle activities med riktig key (qScore)
         SharedPreferences prefs = this.getSharedPreferences("qScore", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt("qScore", (firstscore+score));
@@ -93,7 +102,7 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
     }
 
     public void storeData(String data){
-        String linebreak = System.getProperty("line.separator");
+        String linebreak = System.getProperty("line.separator"); //linjeskift
         final File path = Environment.getExternalStoragePublicDirectory
                 (
                         Environment.DIRECTORY_DOWNLOADS + "/CEdata/" //Hvor dataen lagres
@@ -114,7 +123,8 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
         catch (IOException e){
             Log.e("Exception", "File write failed: " + e.toString());
         }
-        finish();
+
+        finish(); //sender deg tilbake til MainActivity når den er ferdig
     }
 
     @Override
@@ -143,7 +153,7 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
         if (diffY > 0){
 
             ned += 1;
-            if(ned == 10){
+            if(ned == 10){ //brukes for smoothere scrolling
                 i -= 1;
                 ned = 0;
                 checkI();
@@ -153,7 +163,7 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
         } else {
 
             opp += 1;
-            if (opp == 10) {
+            if (opp == 10) { //brukes for smoothere scrolling
                 i += 1;
                 opp = 0;
                 checkI();

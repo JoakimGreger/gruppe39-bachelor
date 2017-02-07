@@ -13,14 +13,6 @@
     android:padding="0dp"
     android:background="#C7DFBA">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="139dp"
-        android:id="@+id/dirTxt" />
-
     <ImageView
         android:id="@+id/smileyImg"
         android:scaleType="fitCenter"
@@ -29,7 +21,8 @@
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
 
     <Button
         android:text="Neste"
@@ -43,17 +36,6 @@
         android:layout_alignBottom="@+id/doneBtn"
         android:layout_alignStart="@+id/doneBtn" />
 
-    <TextView
-        android:text="Hvor fornøyd er du med handelen din ?"
-        android:layout_height="wrap_content"
-        android:id="@+id/innholdTxt"
-        android:textColor="#6393C3"
-        android:padding="5dp"
-        android:layout_width="wrap_content"
-        android:textSize="20dp"
-        android:layout_below="@+id/dirTxt"
-        android:layout_centerHorizontal="true" />
-
     <Button
         android:text="Ferdig"
         android:id="@+id/doneBtn"
@@ -65,5 +47,17 @@
         android:layout_marginBottom="29dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Hvor fornøyd er du med handelen din ?"
+        android:layout_height="wrap_content"
+        android:id="@+id/innholdTxt"
+        android:textColor="#6393C3"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/smileyImg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp" />
 
 </RelativeLayout>
