@@ -1,6 +1,8 @@
 package com.example.joakim.ceapp;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Environment;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -24,11 +26,15 @@ import java.text.SimpleDateFormat;
 
 public class DragActivity extends Activity implements GestureDetector.OnGestureListener {
 
+    TextView innholdTxt;
+    Button nextBtn;
     Button doneBtn;
     GestureDetector detector;
     ImageView smileyImg;
 
     int i = 2;
+    int qOne;
+    int qTwo;
     int opp;
     int ned;
     int smileys[] = {
@@ -44,22 +50,46 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drag);
 
+        innholdTxt = (TextView) findViewById(R.id.innholdTxt);
+        nextBtn = (Button)findViewById(R.id.nextBtn);
         doneBtn = (Button) findViewById(R.id.doneBtn);
         detector = new GestureDetector(this, this);
         smileyImg = (ImageView) findViewById(R.id.smileyImg);
         smileyImg.setImageResource(R.drawable.ic_neutralface);
 
+        nextBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View v) {
+                qOne = i;
+                innholdTxt.setText("Hvor fornøyd er du med tiden handelen tok?");
+                doneBtn.setVisibility(View.VISIBLE);
+                nextBtn.setVisibility(View.GONE);
+            }
+        });
 
         doneBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick (View v) {
+                qTwo = i;
                 long date = System.currentTimeMillis();
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 String dateString = sdf.format(date);
-                storeData(dateString + "," +i); // Lagrer svaret med dato og svar nummer
+                storeScore(50);
+                storeData(dateString + "," + qOne + "," + qTwo ); // Lagrer svaret med dato og svar nummer
             }
         });
 
+    }
+
+    public void storeScore(Integer score){
+
+        SharedPreferences startscore = this.getSharedPreferences("qScore", Context.MODE_PRIVATE);
+        int firstscore = startscore.getInt("qScore", 0);
+
+        SharedPreferences prefs = this.getSharedPreferences("qScore", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt("qScore", (firstscore+score));
+        editor.commit();
     }
 
     public void storeData(String data){

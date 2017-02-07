@@ -21,17 +21,6 @@
         android:layout_marginTop="139dp"
         android:id="@+id/dirTxt" />
 
-    <Button
-        android:text="Ferdig"
-        android:id="@+id/doneBtn"
-        android:background="#155965"
-        android:textColor="#6393C3"
-        android:layout_height="35dp"
-        android:layout_width="200dp"
-        android:layout_marginBottom="17dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
     <ImageView
         android:id="@+id/smileyImg"
         android:scaleType="fitCenter"
@@ -41,6 +30,18 @@
         android:layout_alignParentStart="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:text="Neste"
+        android:textColor="#6393C3"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:id="@+id/nextBtn"
+        android:background="#155965"
+        android:visibility="visible"
+        android:layout_alignBaseline="@+id/doneBtn"
+        android:layout_alignBottom="@+id/doneBtn"
+        android:layout_alignStart="@+id/doneBtn" />
 
     <TextView
         android:text="Hvor fornøyd er du med handelen din ?"
@@ -52,4 +53,17 @@
         android:textSize="20dp"
         android:layout_below="@+id/dirTxt"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Ferdig"
+        android:id="@+id/doneBtn"
+        android:background="#155965"
+        android:textColor="#6393C3"
+        android:layout_height="35dp"
+        android:layout_width="200dp"
+        android:visibility="invisible"
+        android:layout_marginBottom="29dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

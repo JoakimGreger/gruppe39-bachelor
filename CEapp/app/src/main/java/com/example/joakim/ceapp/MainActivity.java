@@ -15,6 +15,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     private Button buttonButton;
+    private Button scoreBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,18 +23,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         buttonButton = (Button) findViewById(R.id.buttonButton);
+        scoreBtn = (Button) findViewById(R.id.scoreBtn);
 
         buttonButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View view) {
-                switchActivity();
+                switchActivityDrag();
             }
         });
 
-    }
+        scoreBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switchActivityScore();
+            }
+        });
 
-    private void switchActivity(){
+}
+
+    private void switchActivityDrag(){
         Intent intent = new Intent(this, DragActivity.class);
+        startActivity(intent);
+    }
+    private void switchActivityScore(){
+        Intent intent = new Intent(this, ScoreActivity.class);
         startActivity(intent);
     }
 }

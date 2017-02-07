@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SecondActivity" />
-        <activity android:name=".DragActivity"></activity>
+        <activity android:name=".DragActivity" />
+        <activity android:name=".ScoreActivity"></activity>
     </application>
 
 </manifest>
