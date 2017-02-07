@@ -34,11 +34,19 @@
         android:id="@+id/scoreTxt" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         app:srcCompat="@drawable/phfingerdrag"
         android:layout_marginTop="24dp"
         android:id="@+id/img"
         android:layout_below="@+id/scoreTxt"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_height="25dp"
+        android:layout_width="25dp" />
+
+    <Button
+        android:text="Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/resetBtn" />
 </RelativeLayout>
