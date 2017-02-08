@@ -3,6 +3,7 @@ package com.example.joakim.ceapp;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.media.Image;
 import android.os.Environment;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -33,6 +34,9 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
     Button doneBtn;
     GestureDetector detector;
     ImageView smileyImg;
+    ImageView handImg;
+    Animation slideAnim;
+    Animation slideUpAnim;
 
     // div variabler som blir brukt
     int i = 2;
@@ -59,8 +63,14 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
         doneBtn = (Button) findViewById(R.id.doneBtn);
         detector = new GestureDetector(this, this);
         smileyImg = (ImageView) findViewById(R.id.smileyImg);
+        handImg = (ImageView) findViewById(R.id.handImg);
+        slideAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide);
+        slideUpAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slideup);
 
+        handImg.setImageResource(R.drawable.hand);
         smileyImg.setImageResource(R.drawable.ic_neutralface);
+
+        startAnims();
 
         //Gjemmer nextBtn og viser doneBtn
         nextBtn.setOnClickListener(new View.OnClickListener(){
@@ -189,6 +199,42 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
         if (i < 0){
             i = 0;
         }
+    }
+    public void startAnims(){
+
+        handImg.startAnimation(slideAnim);
+        slideAnim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                handImg.startAnimation(slideUpAnim);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        slideUpAnim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                handImg.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
     }
 }
 
