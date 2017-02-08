@@ -3,6 +3,7 @@ package com.example.joakim.ceapp;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.media.Image;
 import android.os.Environment;
 import android.support.v4.view.MotionEventCompat;
@@ -54,6 +55,7 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drag);
 
