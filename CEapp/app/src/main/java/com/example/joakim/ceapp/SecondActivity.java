@@ -90,31 +90,38 @@ public class SecondActivity extends AppCompatActivity {
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 String dateString = sdf.format(date);
                 storeData(dateString + "," +i); // Lagrer svaret med dato og svar nummer
+                sendNotification();
             }
         });
     }
-            public void storeData(String data){
-                String linebreak = System.getProperty("line.separator");
-                final File path = Environment.getExternalStoragePublicDirectory
-                        (
-                                Environment.DIRECTORY_DOWNLOADS + "/CEdata/" //Hvor dataen lagres
-                        );
-                if (!path.exists()){ // sjekker om mappen finnes
-                    path.mkdirs(); // lager den hvis ikke
-                }
-                //final File file = new File(path, "CEdata.csv"); //navn på fil
-                File file = new File(path,"CEdata.csv");
-                try{
-                    file.createNewFile();
-                    FileWriter writer = new FileWriter(file, true);
-                    writer.append(data + linebreak);
-                    writer.flush();
-                    writer.close();
-                    Toast.makeText(this, "Data har blitt lagret, takk for svar:)", Toast.LENGTH_SHORT).show();
-                }
-                catch (IOException e){
-                    Log.e("Exception", "File write failed: " + e.toString());
-                }
-                finish();
-            }
+
+    public void storeData(String data){
+        String linebreak = System.getProperty("line.separator");
+        final File path = Environment.getExternalStoragePublicDirectory
+                (
+                        Environment.DIRECTORY_DOWNLOADS + "/CEdata/" //Hvor dataen lagres
+                );
+        if (!path.exists()){ // sjekker om mappen finnes
+            path.mkdirs(); // lager den hvis ikke
+        }
+        //final File file = new File(path, "CEdata.csv"); //navn på fil
+        File file = new File(path,"CEdata.csv");
+        try{
+            file.createNewFile();
+            FileWriter writer = new FileWriter(file, true);
+            writer.append(data + linebreak);
+            writer.flush();
+            writer.close();
+            Toast.makeText(this, "Data har blitt lagret, takk for svar:)", Toast.LENGTH_SHORT).show();
+        }
+
+        catch (IOException e){
+            Log.e("Exception", "File write failed: " + e.toString());
+        }
+        finish();
+    }
+
+    public void sendNotification() {
+        System.out.println("Notification sent.....");
+    }
 }

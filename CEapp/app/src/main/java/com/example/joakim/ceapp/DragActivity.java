@@ -1,7 +1,10 @@
 package com.example.joakim.ceapp;
 
 import android.app.Activity;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.media.Image;
@@ -9,6 +12,7 @@ import android.os.Environment;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.NotificationCompat;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -28,7 +32,8 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 
 
-public class DragActivity extends Activity implements GestureDetector.OnGestureListener {
+public class
+DragActivity extends Activity implements GestureDetector.OnGestureListener {
 
     TextView innholdTxt;
     Button nextBtn;
@@ -38,7 +43,8 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
     ImageView handImg;
     Animation slideAnim;
     Animation slideUpAnim;
-
+    NotificationCompat.Builder notification;
+    private static final int uniqueID = 12345;
     // div variabler som blir brukt
     int i = 2;
     int qOne;
@@ -68,6 +74,8 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
         handImg = (ImageView) findViewById(R.id.handImg);
         slideAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide);
         slideUpAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slideup);
+        notification = new NotificationCompat.Builder(this);
+        notification.setAutoCancel(true);
 
         handImg.setImageResource(R.drawable.hand);
         smileyImg.setImageResource(R.drawable.ic_neutralface);
@@ -82,6 +90,8 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
                 innholdTxt.setText("Hvor fornøyd er du med tiden handelen tok?");
                 doneBtn.setVisibility(View.VISIBLE);
                 nextBtn.setVisibility(View.GONE);
+                startAnims();
+                smileyImg.setImageResource(R.drawable.ic_neutralface);
             }
         });
 
@@ -94,6 +104,7 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 String dateString = sdf.format(date);
                 storeScore(50);
+                createNotification(v);
                 storeData(dateString + "," + qOne + "," + qTwo ); // Lagrer svaret med dato og svar nummer
             }
         });
@@ -137,6 +148,21 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
         }
 
         finish(); //sender deg tilbake til MainActivity når den er ferdig
+    }
+
+    public void createNotification(View view) {
+        notification.setSmallIcon(R.drawable.ic_smileface);
+        notification.setTicker("Dette er en ticker");
+        notification.setWhen(System.currentTimeMillis());
+        notification.setContentTitle("Notifikasjon");
+        notification.setContentText("Dette er notifikasjonens innhold");
+
+        Intent intent = new Intent(this, MainActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        notification.setContentIntent(pendingIntent);
+
+        NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        nm.notify(uniqueID, notification.build());
     }
 
     @Override
