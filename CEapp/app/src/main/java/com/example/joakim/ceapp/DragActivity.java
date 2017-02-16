@@ -1,11 +1,15 @@
 package com.example.joakim.ceapp;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.media.Image;
 import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,6 +44,7 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
     Animation slideUpAnim;
 
     // div variabler som blir brukt
+    private static final int REQUEST_WRITE_STORAGE = 112;
     int i = 2;
     int qOne;
     int qTwo;
@@ -71,7 +76,6 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
 
         handImg.setImageResource(R.drawable.hand);
         smileyImg.setImageResource(R.drawable.ic_neutralface);
-
         startAnims();
 
         //Gjemmer nextBtn og viser doneBtn
@@ -130,7 +134,7 @@ public class DragActivity extends Activity implements GestureDetector.OnGestureL
             writer.append(data + linebreak);
             writer.flush();
             writer.close();
-            Toast.makeText(this, "Data har blitt lagret, takk for svar:)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Data har blitt lagret, takk for svar:)", Toast.LENGTH_LONG).show();
         }
         catch (IOException e){
             Log.e("Exception", "File write failed: " + e.toString());
