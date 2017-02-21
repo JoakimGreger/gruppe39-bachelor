@@ -96,6 +96,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener {
                 nextBtn.setVisibility(View.GONE);
                 startAnims();
                 smileyImg.setImageResource(R.drawable.ic_neutralface);
+                i=2;
             }
         });
 
@@ -145,7 +146,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener {
             writer.append(data + linebreak);
             writer.flush();
             writer.close();
-            Toast.makeText(this, "Data har blitt lagret, takk for svar:)", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Takk for svar. 50 poeng tildelt!", Toast.LENGTH_SHORT).show();
         }
         catch (IOException e){
             Log.e("Exception", "File write failed: " + e.toString());

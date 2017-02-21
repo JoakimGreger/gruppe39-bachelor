@@ -12,44 +12,33 @@
     tools:context="com.example.joakim.ceapp.ScoreActivity"
     android:background="#C7DFBA">
 
-    <TextView
-        android:text="Din score:"
+    <Button
+        android:text="Reset"
+        android:layout_height="30dp"
         android:textColor="#6393C3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="134dp"
-        android:layout_marginTop="71dp"
-        android:textSize="24dp"
-        android:id="@+id/scorenameTxt" />
+        android:layout_alignParentEnd="true"
+        android:id="@+id/resetBtn"
+        android:background="#155965"
+        android:layout_width="120dp" />
+
+    <ImageView
+        app:srcCompat="@mipmap/ic_score_bilde"
+        android:id="@+id/img"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
 
     <TextView
         android:text="ph"
         android:textColor="#6393C3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/scorenameTxt"
-        android:layout_alignStart="@+id/scorenameTxt"
-        android:layout_marginTop="22dp"
         android:textSize="22dp"
-        android:id="@+id/scoreTxt" />
-
-    <ImageView
-        app:srcCompat="@drawable/phfingerdrag"
-        android:layout_marginTop="24dp"
-        android:id="@+id/img"
-        android:layout_below="@+id/scoreTxt"
-        android:layout_centerHorizontal="true"
-        android:layout_height="25dp"
-        android:layout_width="25dp" />
-
-    <Button
-        android:text="Reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/resetBtn" />
+        android:textAlignment="center"
+        android:id="@+id/scoreTxt"
+        android:layout_below="@+id/resetBtn"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

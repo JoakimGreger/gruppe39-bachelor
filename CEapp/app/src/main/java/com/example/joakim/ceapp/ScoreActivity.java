@@ -29,10 +29,10 @@ public class ScoreActivity extends AppCompatActivity {
         SharedPreferences prefs = this.getSharedPreferences("qScore", Context.MODE_PRIVATE);
         score = prefs.getInt("qScore", 0);
 
-        scoreTxt.setText("" + score);
+        scoreTxt.setText("Din score: " + score);
 
-        img.getLayoutParams().width=(score/2);
-        img.getLayoutParams().height=(score/2);
+        img.getLayoutParams().width=(score/20);
+        img.getLayoutParams().height=(score/20);
 
         resetBtn.setOnClickListener(new View.OnClickListener() {
             @Override

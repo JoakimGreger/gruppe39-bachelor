@@ -37,7 +37,7 @@
         android:textSize="10dp"/>
 
     <ImageView
-        app:srcCompat="@mipmap/ph_picture"
+        app:srcCompat="@mipmap/ic_logo"
         android:id="@+id/imageView"
         android:layout_width="500dp"
         android:layout_height="200dp"
