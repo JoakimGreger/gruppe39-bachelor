@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
+import android.graphics.BitmapFactory;
 import android.media.Image;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
@@ -156,7 +157,9 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener {
     }
 
     public void createNotification(View view) {
-        notification.setSmallIcon(R.drawable.ic_smileface);
+        notification.setSmallIcon(R.drawable.ic_notification_img);
+        notification.setLargeIcon(BitmapFactory.decodeResource(view.getResources(),
+                R.mipmap.app_icon));
         notification.setTicker("Dette er en ticker");
         notification.setWhen(System.currentTimeMillis());
         notification.setContentTitle("Notifikasjon");

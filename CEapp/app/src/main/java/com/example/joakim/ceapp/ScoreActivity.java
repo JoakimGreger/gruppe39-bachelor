@@ -10,12 +10,20 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class ScoreActivity extends AppCompatActivity {
 
     TextView scoreTxt;
     ImageView img;
     Button resetBtn;
     int score;
+
+    int scorePics[] = {
+            R.drawable.score_bilde,
+            R.drawable.score_bilde2,
+            R.drawable.score_bilde3
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +38,12 @@ public class ScoreActivity extends AppCompatActivity {
         score = prefs.getInt("qScore", 0);
 
         scoreTxt.setText("Din score: " + score);
+
+        //en random for tilfeldig score bilde
+        Random rand = new Random();
+        int n = rand.nextInt(scorePics.length);
+
+        img.setImageResource(scorePics[n]);
 
         img.getLayoutParams().width=(score/20);
         img.getLayoutParams().height=(score/20);
