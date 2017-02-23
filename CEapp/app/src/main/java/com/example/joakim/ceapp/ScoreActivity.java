@@ -45,8 +45,8 @@ public class ScoreActivity extends AppCompatActivity {
 
         img.setImageResource(scorePics[n]);
 
-        img.getLayoutParams().width=(score/20);
-        img.getLayoutParams().height=(score/20);
+        img.getLayoutParams().width=(score/10);
+        img.getLayoutParams().height=(score/10);
 
         resetBtn.setOnClickListener(new View.OnClickListener() {
             @Override

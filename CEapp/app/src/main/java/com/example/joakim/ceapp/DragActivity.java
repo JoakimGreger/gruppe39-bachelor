@@ -101,10 +101,8 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener {
             public void onClick (View v) {
                 startFadeAnims();
                 qOne = i;
-                innholdTxt.setText("Hvor fornøyd er du med tiden handelen tok?");
                 doneBtn.setVisibility(View.VISIBLE);
                 nextBtn.setVisibility(View.GONE);
-                smileyImg.setImageResource(R.drawable.ic_neutralface);
                 i=2;
             }
         });
@@ -281,9 +279,10 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener {
         });
     }
     public void startFadeAnims(){
-        innholdTxt.startAnimation(fadeInAnim);
-        smileyImg.startAnimation(fadeInAnim);
-        doneBtn.startAnimation(fadeInAnim);
+        innholdTxt.startAnimation(fadeOutAnim);
+        smileyImg.startAnimation(fadeOutAnim);
+        //doneBtn.startAnimation(fadeInAnim);
+
         fadeOutAnim.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
@@ -292,6 +291,10 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener {
 
             @Override
             public void onAnimationEnd(Animation animation) {
+                innholdTxt.startAnimation(fadeInAnim);
+                smileyImg.startAnimation(fadeInAnim);
+                innholdTxt.setText("Hvor fornøyd er du med tiden handelen tok?");
+                smileyImg.setImageResource(R.drawable.ic_neutralface);
             }
 
             @Override
