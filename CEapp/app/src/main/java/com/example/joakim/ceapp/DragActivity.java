@@ -48,6 +48,8 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener {
     ImageView handImg;
     Animation slideAnim;
     Animation slideUpAnim;
+    Animation fadeOutAnim;
+    Animation fadeInAnim;
     NotificationCompat.Builder notification;
     private static final int uniqueID = 12345;
     // div variabler som blir brukt
@@ -78,24 +80,30 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener {
         detector = new GestureDetector(this, this);
         smileyImg = (ImageView) findViewById(R.id.smileyImg);
         handImg = (ImageView) findViewById(R.id.handImg);
+
+        //animasjoner
         slideAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide);
         slideUpAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slideup);
+        fadeOutAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadeout);
+        fadeInAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
+
+        //notifikasjon
         notification = new NotificationCompat.Builder(this);
         notification.setAutoCancel(true);
 
         handImg.setImageResource(R.drawable.hand);
         smileyImg.setImageResource(R.drawable.ic_neutralface);
-        startAnims();
+        startHandAnims();
 
         //Gjemmer nextBtn og viser doneBtn
         nextBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View v) {
+                startFadeAnims();
                 qOne = i;
                 innholdTxt.setText("Hvor fornøyd er du med tiden handelen tok?");
                 doneBtn.setVisibility(View.VISIBLE);
                 nextBtn.setVisibility(View.GONE);
-                startAnims();
                 smileyImg.setImageResource(R.drawable.ic_neutralface);
                 i=2;
             }
@@ -236,7 +244,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener {
             i = 0;
         }
     }
-    public void startAnims(){
+    public void startHandAnims(){
 
         handImg.startAnimation(slideAnim);
         slideAnim.setAnimationListener(new Animation.AnimationListener() {
@@ -264,6 +272,26 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener {
             @Override
             public void onAnimationEnd(Animation animation) {
                 handImg.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+    }
+    public void startFadeAnims(){
+        innholdTxt.startAnimation(fadeInAnim);
+        smileyImg.startAnimation(fadeInAnim);
+        doneBtn.startAnimation(fadeInAnim);
+        fadeOutAnim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
             }
 
             @Override
