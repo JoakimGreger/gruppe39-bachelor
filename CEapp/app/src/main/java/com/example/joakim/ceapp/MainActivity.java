@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        askForLocationPermission();
 
         buttonButton = (Button) findViewById(R.id.buttonButton);
         scoreBtn = (Button) findViewById(R.id.scoreBtn);
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, DragActivity.class);
             startActivity(intent);
         } else {
-            askForPermission();
+            askForStoragePermission();
         }
     }
     private void switchActivityScore(){
@@ -62,12 +63,26 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void askForPermission(){
+    public void askForStoragePermission(){
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+        }
+    }
+    public void askForLocationPermission(){
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 2);
+        }
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 2);
         }
     }
 }
