@@ -46,10 +46,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.CollationElementIterator;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 
 
 public class
-DragActivity extends Activity implements GestureDetector.OnGestureListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
+DragActivity extends Activity implements GestureDetector.OnGestureListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener{
 
     public static final String TAG = DragActivity.class.getSimpleName();
 
@@ -72,11 +73,11 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
     int opp;
     int ned;
     int smileys[] = {
-            R.drawable.ic_madface,
-            R.drawable.ic_sadface,
-            R.drawable.ic_neutralface,
-            R.drawable.ic_smileface,
-            R.drawable.ic_happyface
+            R.drawable.madface,
+            R.drawable.sadface,
+            R.drawable.neutralface,
+            R.drawable.smileface,
+            R.drawable.happyface
     };
     //Variabler for lokasjonssjekking
     private GoogleApiClient mGoogleApiClient;
@@ -90,6 +91,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drag);
+
 
         // Googles Api client
         if (mGoogleApiClient == null) {
@@ -119,7 +121,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         notification.setAutoCancel(true);
 
         handImg.setImageResource(R.drawable.hand);
-        smileyImg.setImageResource(R.drawable.ic_neutralface);
+        smileyImg.setImageResource(R.drawable.neutralface);
         startHandAnims();
 
         //Gjemmer nextBtn og viser doneBtn
@@ -323,7 +325,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
                 innholdTxt.startAnimation(fadeInAnim);
                 smileyImg.startAnimation(fadeInAnim);
                 innholdTxt.setText("Hvor fornøyd er du med tiden handelen tok?");
-                smileyImg.setImageResource(R.drawable.ic_neutralface);
+                smileyImg.setImageResource(R.drawable.neutralface);
                 doneBtn.setVisibility(View.VISIBLE);
             }
 
@@ -378,16 +380,31 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         Location location = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
         mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
         if (location == null) {
-            // Blank for a moment...
         }
         else {
             handleNewLocation(location);
-        };
+        }
+
+        // sjekker om telefonens lokasjon er nær Rema1000 som er nær skolen
+        float[] dist = new float[1];
+        float[] dist2 = new float[1];
+        Location.distanceBetween(mLastLocation.getLatitude(),mLastLocation.getLongitude(),59.914530, 10.756848,dist);
+         if(dist[0] < 50){
+            locationCheck();
+         }
+        Location.distanceBetween(mLastLocation.getLatitude(),mLastLocation.getLongitude(),60.110974, 11.367684,dist2);
+        if(dist2[0] < 50){
+            locationCheck();
+        }
+
     }
     private void handleNewLocation(Location location) {
         Log.d(TAG, location.toString());
         mLatitudeText = (String.valueOf(mLastLocation.getLatitude()));
         mLongitudeText = (String.valueOf(mLastLocation.getLongitude()));
+    }
+    private void locationCheck(){
+        innholdTxt.setText("It works");
     }
 
     @Override
