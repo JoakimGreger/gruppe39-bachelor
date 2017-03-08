@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.annotation.NonNull;
@@ -26,6 +27,21 @@ import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.lang.reflect.Array;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * Created by pedjo on 01-Mar-17.
@@ -38,12 +54,21 @@ public class LocationService extends Service implements LocationListener, Google
     private Location mLastLocation;
     //notification variabler
 
+    //JSON variabler
+    List<Double> latitude = new ArrayList<>();
+    List<Double> longitude = new ArrayList<>();
+    List<String> title = new ArrayList<>();
+    //List<String> questions = new ArrayList<>();
+    //private Double[] latitude;
+    //private Double[] longitude;
+
     public LocationService() {
 
     }
 
     @Override
     public void onCreate() {
+        new getJSON().execute("http://bimorstad.tech/pokemons/usertests.json");
         super.onCreate();
 
         mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -64,6 +89,60 @@ public class LocationService extends Service implements LocationListener, Google
         throw new UnsupportedOperationException("Not yet implemented");
     }
 
+    //start hent JSON fra nettside funksjon
+    public class getJSON extends AsyncTask <String,String,String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            StringBuilder builder = new StringBuilder();
+            BufferedReader reader = null;
+            HttpURLConnection connection = null;
+            try{
+                String adress = params[0];
+                URL url = new URL(adress);
+                connection = (HttpURLConnection) url.openConnection();
+                InputStream in = connection.getInputStream();
+                reader = new BufferedReader(new InputStreamReader(in));
+                String line;
+                while ((line=reader.readLine())!= null){
+                    builder.append(line);
+                }
+            }catch (MalformedURLException e){
+                e.printStackTrace();
+            }catch (IOException e){
+                e.printStackTrace();
+            }finally {
+                if (connection != null){
+                    connection.disconnect();
+                }
+                try{
+                    if (reader != null){
+                        reader.close();
+                    }
+                } catch (IOException e){
+                    e.printStackTrace();
+                }
+            }
+            return builder.toString();
+        }
+        protected void onPostExecute(String result){
+            super.onPostExecute(result);
+            try{
+                JSONArray json = new JSONArray(result);
+                for (int i = 0; i < json.length(); i++){
+                    JSONObject obj = json.getJSONObject(i);
+                    latitude.add(obj.getDouble("Latitude"));
+                    longitude.add(obj.getDouble("Longitude"));
+                    title.add(obj.getString("Title"));
+                    //questions.add(obj.getString("Questions"));
+
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    // slutt hent JSON fra nettside funksjon
 
     @Override
     public void onLocationChanged(Location location) {
@@ -79,16 +158,13 @@ public class LocationService extends Service implements LocationListener, Google
             mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
 
             float[] dist = new float[1];
-            Location.distanceBetween(mLastLocation.getLatitude(), mLastLocation.getLongitude(), 59.916058, 10.760410, dist);
-            if (dist[0] < 50) {
-                createNotification("Skole", "Du er nå på skolen!");
+            //sjekker om mobilens lokasjon er lik en annen lokasjon innen 50 meter
+            for (int i = 0; i<latitude.size(); i++) {
+                Location.distanceBetween(mLastLocation.getLatitude(), mLastLocation.getLongitude(), latitude.get(i), longitude.get(i), dist);
+                if (dist[0] < 50) {
+                    createNotification(title.get(i), "" + latitude.get(i) + "," + longitude.get(i));
+                }
             }
-            float[] dist2 = new float[1];
-            Location.distanceBetween(mLastLocation.getLatitude(), mLastLocation.getLongitude(), 60.111017, 11.367663, dist);
-            if (dist[0] < 50) {
-                createNotification("Hjemme", "Du er nå hjemme!");
-            }
-
         }
 
     }
@@ -152,5 +228,7 @@ public class LocationService extends Service implements LocationListener, Google
         nManager.notify(NOTIFICATION_ID, builder.build());
 
     }
-}
+
+    }
+
 
