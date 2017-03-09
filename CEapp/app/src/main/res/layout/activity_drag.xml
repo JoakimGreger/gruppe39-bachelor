@@ -61,7 +61,6 @@
         android:layout_height="200dp" />
 
     <TextView
-        android:text="Hvor fornøyd er du med handelen din ?"
         android:layout_height="wrap_content"
         android:id="@+id/innholdTxt"
         android:textColor="#6393C3"

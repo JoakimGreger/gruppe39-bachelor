@@ -35,7 +35,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -58,6 +57,7 @@ public class LocationService extends Service implements LocationListener, Google
     List<Double> latitude = new ArrayList<>();
     List<Double> longitude = new ArrayList<>();
     List<String> title = new ArrayList<>();
+    List<String> cords = new ArrayList<>();
     //List<String> questions = new ArrayList<>();
     //private Double[] latitude;
     //private Double[] longitude;
@@ -133,7 +133,7 @@ public class LocationService extends Service implements LocationListener, Google
                     JSONObject obj = json.getJSONObject(i);
                     latitude.add(obj.getDouble("Latitude"));
                     longitude.add(obj.getDouble("Longitude"));
-                    title.add(obj.getString("Title"));
+                    //title.add(obj.getString("Title"));
                     //questions.add(obj.getString("Questions"));
 
                 }
@@ -162,7 +162,9 @@ public class LocationService extends Service implements LocationListener, Google
             for (int i = 0; i<latitude.size(); i++) {
                 Location.distanceBetween(mLastLocation.getLatitude(), mLastLocation.getLongitude(), latitude.get(i), longitude.get(i), dist);
                 if (dist[0] < 50) {
-                    createNotification(title.get(i), "" + latitude.get(i) + "," + longitude.get(i));
+                    createNotification(title.get(i), "Ny undersøkelse fra " + title);
+                    Cords.getInstance().setLatitude(latitude.get(i));
+                    Cords.getInstance().setLongitude(longitude.get(i));
                 }
             }
         }

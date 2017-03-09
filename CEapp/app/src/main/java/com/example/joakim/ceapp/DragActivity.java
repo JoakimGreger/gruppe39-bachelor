@@ -13,6 +13,7 @@ import android.graphics.BitmapFactory;
 import android.location.Location;
 import android.location.LocationManager;
 import android.media.Image;
+import android.os.AsyncTask;
 import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -39,14 +40,24 @@ import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.w3c.dom.Text;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.CollationElementIterator;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class
@@ -85,9 +96,19 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
     private String mLatitudeText;
     private String mLongitudeText;
 
+    //Variabler for JSON henting +  spørsmål
+    Double latitude = Cords.getInstance().getLatitude();
+    Double longitude = Cords.getInstance().getLongitude();
+    JSONArray questions = new JSONArray();
+    List<String> question = new ArrayList<>();
+    int q = 0;
+    List<String> questionList = new ArrayList<>();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        new getJSON().execute("http://webapp.bimorstad.tech/usertest/read");
         super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drag);
@@ -124,6 +145,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         smileyImg.setImageResource(R.drawable.neutralface);
         startHandAnims();
 
+        /*
         //Gjemmer nextBtn og viser doneBtn
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -149,7 +171,104 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
                 storeData(dateString + "," + qOne + "," + qTwo + "," + mLatitudeText + "," + mLongitudeText); // Lagrer svaret med dato og svar nummer
             }
         });
+        */
 
+    }
+
+
+    //start hent JSON fra nettside funksjon
+    public class getJSON extends AsyncTask<String,String,String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            StringBuilder builder = new StringBuilder();
+            BufferedReader reader = null;
+            HttpURLConnection connection = null;
+            try{
+                String adress = params[0];
+                URL url = new URL(adress);
+                connection = (HttpURLConnection) url.openConnection();
+                InputStream in = connection.getInputStream();
+                reader = new BufferedReader(new InputStreamReader(in));
+                String line;
+                while ((line=reader.readLine())!= null){
+                    builder.append(line);
+                }
+            }catch (MalformedURLException e){
+                e.printStackTrace();
+            }catch (IOException e){
+                e.printStackTrace();
+            }finally {
+                if (connection != null){
+                    connection.disconnect();
+                }
+                try{
+                    if (reader != null){
+                        reader.close();
+                    }
+                } catch (IOException e){
+                    e.printStackTrace();
+                }
+            }
+            return builder.toString();
+        }
+        protected void onPostExecute(String result){
+            super.onPostExecute(result);
+            try{
+                JSONArray json = new JSONArray(result);
+                for (int i = 0; i < json.length(); i++){
+                    JSONObject obj = json.getJSONObject(i);
+                    if (obj.getDouble("Latitude") == latitude && obj.getDouble("Longitude") == longitude) {
+                        questions = obj.getJSONArray("Questions");
+                        for (int k = 0; k < questions.length(); k++) {
+                            JSONObject test = questions.getJSONObject(k);
+                            question.add(test.getString("Question"));
+                        }
+                    }
+
+                }
+                // for å sjekke i konsoll hvilke sprms vi har
+                Log.d("TAG", question.toString());
+                generateQuestions();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    // slutt hent JSON fra nettside funksjon
+
+    public void generateQuestions(){
+        innholdTxt.setText(question.get(q));
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                innholdTxt.setText(question.get(q));
+                if (q == 0){
+                    questionList.add(""+i);
+                    innholdTxt.setText(question.get(1));
+                    q = 1;
+                }
+                questionList.add(""+i);
+                if (q < question.size()){
+                    i = 2;
+                    startFadeAnims();
+                    q++;
+                }
+                if (q == question.size()){
+                    q = question.size();
+                    nextBtn.setVisibility(View.GONE);
+                    doneBtn.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+        doneBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                storeData(questionList);
+                storeScore((50*question.size()));
+                finish();
+            }
+        });
     }
 
     public void storeScore(Integer score) {
@@ -165,7 +284,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         editor.commit();
     }
 
-    public void storeData(String data) {
+    public void storeData(List<String> data) {
         String linebreak = System.getProperty("line.separator"); //linjeskift
         final File path = Environment.getExternalStoragePublicDirectory
                 (
@@ -182,7 +301,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
             writer.append(data + linebreak);
             writer.flush();
             writer.close();
-            Toast.makeText(this, "Takk for svar. 50 poeng tildelt!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Takk for svar. Poeng tildelt!", Toast.LENGTH_SHORT).show();
         } catch (IOException e) {
             Log.e("Exception", "File write failed: " + e.toString());
         }
@@ -324,9 +443,8 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
             public void onAnimationEnd(Animation animation) {
                 innholdTxt.startAnimation(fadeInAnim);
                 smileyImg.startAnimation(fadeInAnim);
-                innholdTxt.setText("Hvor fornøyd er du med tiden handelen tok?");
                 smileyImg.setImageResource(R.drawable.neutralface);
-                doneBtn.setVisibility(View.VISIBLE);
+                //doneBtn.setVisibility(View.VISIBLE);
             }
 
             @Override
@@ -404,7 +522,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         mLongitudeText = (String.valueOf(mLastLocation.getLongitude()));
     }
     private void locationCheck(){
-        innholdTxt.setText("It works");
+
     }
 
     @Override
