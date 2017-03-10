@@ -130,9 +130,9 @@ public class LocationService extends Service implements LocationListener, Google
                 JSONArray json = new JSONArray(result);
                 for (int i = 0; i < json.length(); i++){
                     JSONObject obj = json.getJSONObject(i);
-                    latitude.add(obj.getDouble("Latitude"));
-                    longitude.add(obj.getDouble("Longitude"));
-                    title.add(obj.getString("Title"));
+                    latitude.add(obj.getDouble("latitude"));
+                    longitude.add(obj.getDouble("longitude"));
+                    title.add(obj.getString("title"));
                     //questions.add(obj.getString("Questions"));
 
                 }
@@ -157,7 +157,7 @@ public class LocationService extends Service implements LocationListener, Google
             mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
 
             float[] dist = new float[1];
-            //sjekker om mobilens lokasjon er lik en annen lokasjon innen 50 meter
+            //sjekker om mobilens lokasjon er lik en annen lokasjon innen 50 meter og lagrer lat og long som kan hentes i DragActivity
             for (int i = 0; i<latitude.size(); i++) {
                 Location.distanceBetween(mLastLocation.getLatitude(), mLastLocation.getLongitude(), latitude.get(i), longitude.get(i), dist);
                 if (dist[0] < 50) {

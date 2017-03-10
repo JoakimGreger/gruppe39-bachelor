@@ -49,7 +49,11 @@ public class MainActivity extends AppCompatActivity {
             buttonButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    switchActivityDrag();
+                    if (Cords.getInstance().getLatitude() != null) {
+                        switchActivityDrag();
+                    } else {
+                        Toast.makeText(MainActivity.this, "Du har desverre ikke fått en undersøkelse ennå. Sjekk igjen senere", Toast.LENGTH_LONG).show();
+                    }
                 }
             });
         scoreBtn.setOnClickListener(new View.OnClickListener() {

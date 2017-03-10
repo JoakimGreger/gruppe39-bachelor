@@ -103,6 +103,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
     List<String> question = new ArrayList<>();
     int q = 0;
     List<String> questionList = new ArrayList<>();
+    String id;
 
 
 
@@ -218,11 +219,12 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
                 JSONArray json = new JSONArray(result);
                 for (int i = 0; i < json.length(); i++){
                     JSONObject obj = json.getJSONObject(i);
-                    if (obj.getDouble("Latitude") == latitude && obj.getDouble("Longitude") == longitude) {
-                        questions = obj.getJSONArray("Questions");
+                    if (obj.getDouble("latitude") == latitude && obj.getDouble("longitude") == longitude) {
+                        questions = obj.getJSONArray("questions");
+                        id = obj.getString("Id");
                         for (int k = 0; k < questions.length(); k++) {
                             JSONObject test = questions.getJSONObject(k);
-                            question.add(test.getString("Question"));
+                            question.add(test.getString("question"));
                         }
                     }
 
@@ -264,8 +266,14 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         doneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                storeData(questionList);
+                storeData(id + "," + questionList);
                 storeScore((50*question.size()));
+                Cords.getInstance().setLatitude(null);
+                Cords.getInstance().setLatitude(null);
+                NotificationManager notificationManager = (NotificationManager)
+                        getSystemService(Context.
+                                NOTIFICATION_SERVICE);
+                notificationManager.cancelAll();
                 finish();
             }
         });
@@ -284,7 +292,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         editor.commit();
     }
 
-    public void storeData(List<String> data) {
+    public void storeData(String data) {
         String linebreak = System.getProperty("line.separator"); //linjeskift
         final File path = Environment.getExternalStoragePublicDirectory
                 (
