@@ -246,7 +246,6 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
             public void onClick(View v) {
                 innholdTxt.setText(question.get(q));
                 if (q == 0){
-                    questionList.add(""+i);
                     innholdTxt.setText(question.get(1));
                     q = 1;
                 }
@@ -266,6 +265,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         doneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                questionList.add(""+i);
                 storeData(id + "," + questionList);
                 storeScore((50*question.size()));
                 Cords.getInstance().setLatitude(null);

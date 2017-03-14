@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
         buttonButton = (Button) findViewById(R.id.buttonButton);
         scoreBtn = (Button) findViewById(R.id.scoreBtn);
-        emojiButton = (Button) findViewById(R.id.emojiButton);
 
             buttonButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -63,13 +62,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        emojiButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                switchActivityEmoji();
-            }
-        });
-
 }
 
     private void switchActivityDrag(){
@@ -84,10 +76,6 @@ public class MainActivity extends AppCompatActivity {
     }
     private void switchActivityScore(){
         Intent intent = new Intent(this, ScoreActivity.class);
-        startActivity(intent);
-    }
-    private void switchActivityEmoji(){
-        Intent intent = new Intent(this, EmojiActivity.class);
         startActivity(intent);
     }
 

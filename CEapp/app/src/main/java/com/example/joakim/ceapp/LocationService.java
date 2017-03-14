@@ -13,6 +13,7 @@ import android.location.Location;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.IBinder;
 import android.support.annotation.NonNull;
 
@@ -156,14 +157,30 @@ public class LocationService extends Service implements LocationListener, Google
             // for ActivityCompat#requestPermissions for more details.
             mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
 
-            float[] dist = new float[1];
+            final float[] dist = new float[1];
             //sjekker om mobilens lokasjon er lik en annen lokasjon innen 50 meter og lagrer lat og long som kan hentes i DragActivity
             for (int i = 0; i<latitude.size(); i++) {
                 Location.distanceBetween(mLastLocation.getLatitude(), mLastLocation.getLongitude(), latitude.get(i), longitude.get(i), dist);
                 if (dist[0] < 50) {
-                    createNotification(title.get(i), "Ny undersøkelse fra " + title.get(i));
-                    Cords.getInstance().setLatitude(latitude.get(i));
-                    Cords.getInstance().setLongitude(longitude.get(i));
+                    final int finalI = i;
+                    // countdown for 7 minutter
+                    new CountDownTimer(300000, 1000) {
+                        @Override
+                        public void onTick(long millisUntilFinished) {
+
+                        }
+
+                        @Override
+                        public void onFinish() {
+                            //hvis location er fortsatt lik etter 7 min, send notifikasjon
+                            if(dist[0]<50) {
+                                createNotification(title.get(finalI), "Ny undersøkelse fra " + title.get(finalI));
+                                Cords.getInstance().setLatitude(latitude.get(finalI));
+                                Cords.getInstance().setLongitude(longitude.get(finalI));
+
+                            }
+                        }
+                    }.start();
                 }
             }
         }
@@ -220,12 +237,12 @@ public class LocationService extends Service implements LocationListener, Google
                         .setContentText(content);
         int NOTIFICATION_ID = 12345;
 
-        Intent targetIntent = new Intent(this, MainActivity.class);
+        Intent targetIntent = new Intent(this, DragActivity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0, targetIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         builder.setContentIntent(contentIntent);
         NotificationManager nManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         builder.setAutoCancel(true);
-        //vibrasjon-->builder.setVibrate(new long[] { 250, 250});
+        //vibrasjon builder.setVibrate(new long[] { 600, 600});
         nManager.notify(NOTIFICATION_ID, builder.build());
 
     }
