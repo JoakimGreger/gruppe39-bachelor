@@ -46,6 +46,7 @@ import org.json.JSONObject;
 import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
+import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -79,8 +80,6 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
     private static final int uniqueID = 12345;
     // div variabler som blir brukt
     int i = 2;
-    int qOne;
-    int qTwo;
     int opp;
     int ned;
     int smileys[] = {
@@ -104,7 +103,6 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
     int q = 0;
     List<String> questionList = new ArrayList<>();
     String id;
-
 
 
     @Override
@@ -186,8 +184,8 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
             BufferedReader reader = null;
             HttpURLConnection connection = null;
             try{
-                String adress = params[0];
-                URL url = new URL(adress);
+                String address = params[0];
+                URL url = new URL(address);
                 connection = (HttpURLConnection) url.openConnection();
                 InputStream in = connection.getInputStream();
                 reader = new BufferedReader(new InputStreamReader(in));
@@ -241,13 +239,22 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
 
     public void generateQuestions(){
         innholdTxt.setText(question.get(q));
+
+        //test for å unngå crash når det er kun 1 sprsm i listen
+        if (question.size() == 1){
+            nextBtn.setVisibility(View.GONE);
+            doneBtn.setVisibility(View.VISIBLE);
+        }
+
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 innholdTxt.setText(question.get(q));
                 if (q == 0){
                     innholdTxt.setText(question.get(1));
-                    q = 1;
+                    if (question.size() > 1) {
+                        q = 1;
+                    }
                 }
                 questionList.add(""+i);
                 if (q < question.size()){
@@ -266,6 +273,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
             @Override
             public void onClick(View v) {
                 questionList.add(""+i);
+                storeDataTwo(id,questionList);
                 storeData(id + "," + questionList);
                 storeScore((50*question.size()));
                 Cords.getInstance().setLatitude(null);
@@ -316,6 +324,66 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
 
         finish(); //sender deg tilbake til MainActivity når den er ferdig
     }
+    public void storeDataTwo(String id, List<String> answers){
+        JSONObject questionAnswers = new JSONObject();
+        try
+        {
+            questionAnswers.put("usertestId", id);
+            questionAnswers.put("score", answers.toString().replace("[", "").replace("]", ""));
+        } catch (JSONException e){
+            e.printStackTrace();
+        }
+        new AsyncPost().execute("http://webapp.bimorstad.tech/feedback/create", questionAnswers.toString());
+       Log.w("CEMlocate", questionAnswers.toString());
+    }
+
+    //start asyncpost
+    private class AsyncPost extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+
+            String data = "";
+
+            HttpURLConnection httpURLConnection = null;
+            try {
+
+                httpURLConnection = (HttpURLConnection) new URL(params[0]).openConnection();
+                httpURLConnection.setRequestMethod("POST");
+
+                httpURLConnection.setDoOutput(true);
+
+                DataOutputStream wr = new DataOutputStream(httpURLConnection.getOutputStream());
+                wr.writeBytes("PostData=" + params[1]);
+                wr.flush();
+                wr.close();
+
+                InputStream in = httpURLConnection.getInputStream();
+                InputStreamReader inputStreamReader = new InputStreamReader(in);
+
+                int inputStreamData = inputStreamReader.read();
+                while (inputStreamData != -1) {
+                    char current = (char) inputStreamData;
+                    inputStreamData = inputStreamReader.read();
+                    data += current;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                if (httpURLConnection != null) {
+                    httpURLConnection.disconnect();
+                }
+            }
+
+            return data;
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            super.onPostExecute(result);
+            Log.e("TAG", result); // this is expecting a response code to be sent from your server upon receiving the POST data
+        }
+    }//end async post
 
     public void createNotification(View view) {
         notification.setSmallIcon(R.drawable.ic_notification_img);

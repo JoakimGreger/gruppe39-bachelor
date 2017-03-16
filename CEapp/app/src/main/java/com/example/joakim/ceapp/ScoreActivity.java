@@ -22,7 +22,8 @@ public class ScoreActivity extends AppCompatActivity {
     int scorePics[] = {
             R.drawable.score_bilde,
             R.drawable.score_bilde2,
-            R.drawable.score_bilde3
+            R.drawable.score_bilde3,
+            R.drawable.score_bilde4
     };
 
     @Override

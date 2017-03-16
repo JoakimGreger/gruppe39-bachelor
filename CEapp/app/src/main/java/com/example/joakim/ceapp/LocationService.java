@@ -98,8 +98,8 @@ public class LocationService extends Service implements LocationListener, Google
             BufferedReader reader = null;
             HttpURLConnection connection = null;
             try{
-                String adress = params[0];
-                URL url = new URL(adress);
+                String address = params[0];
+                URL url = new URL(address);
                 connection = (HttpURLConnection) url.openConnection();
                 InputStream in = connection.getInputStream();
                 reader = new BufferedReader(new InputStreamReader(in));
@@ -164,7 +164,7 @@ public class LocationService extends Service implements LocationListener, Google
                 if (dist[0] < 50) {
                     final int finalI = i;
                     // countdown for 7 minutter
-                    new CountDownTimer(300000, 1000) {
+                    new CountDownTimer(5000, 1000) {
                         @Override
                         public void onTick(long millisUntilFinished) {
 
@@ -173,6 +173,7 @@ public class LocationService extends Service implements LocationListener, Google
                         @Override
                         public void onFinish() {
                             //hvis location er fortsatt lik etter 7 min, send notifikasjon
+                            Location.distanceBetween(mLastLocation.getLatitude(), mLastLocation.getLongitude(), latitude.get(finalI), longitude.get(finalI), dist);
                             if(dist[0]<50) {
                                 createNotification(title.get(finalI), "Ny undersøkelse fra " + title.get(finalI));
                                 Cords.getInstance().setLatitude(latitude.get(finalI));
