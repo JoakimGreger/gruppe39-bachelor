@@ -101,8 +101,11 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
     JSONArray questions = new JSONArray();
     List<String> question = new ArrayList<>();
     int q = 0;
+    int index = 0;
     List<String> questionList = new ArrayList<>();
     String id;
+    JSONObject answers = new JSONObject();
+    JSONArray answersArray = new JSONArray();
 
 
     @Override
@@ -249,6 +252,15 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try {
+                    answers.put("index",index);
+                    answers.put("score",i);
+                    answersArray.put(answers);
+                    Toast.makeText(DragActivity.this, ""+answers.toString(), Toast.LENGTH_SHORT).show();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                index++;
                 innholdTxt.setText(question.get(q));
                 if (q == 0){
                     innholdTxt.setText(question.get(1));
@@ -272,6 +284,14 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         doneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try {
+                    answers.put("index",index);
+                    answers.put("score",i);
+                    answersArray.put(answers);
+                    Toast.makeText(DragActivity.this, ""+answers.toString(), Toast.LENGTH_SHORT).show();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 questionList.add(""+i);
                 storeDataTwo(id,questionList);
                 storeData(id + "," + questionList);
@@ -324,17 +344,17 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
 
         finish(); //sender deg tilbake til MainActivity når den er ferdig
     }
+    //Store data til AsyncPost
     public void storeDataTwo(String id, List<String> answers){
         JSONObject questionAnswers = new JSONObject();
         try
         {
-            questionAnswers.put("usertestId", id);
-            questionAnswers.put("score", answers.toString().replace("[", "").replace("]", ""));
+            questionAnswers.put("usertestid", id);
+            questionAnswers.put("answers", answersArray);
         } catch (JSONException e){
             e.printStackTrace();
         }
         new AsyncPost().execute("http://webapp.bimorstad.tech/feedback/create", questionAnswers.toString());
-       Log.w("CEMlocate", questionAnswers.toString());
     }
 
     //start asyncpost
@@ -342,7 +362,8 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
 
         @Override
         protected String doInBackground(String... params) {
-
+            Log.e("TAG", params[0]); // logger siden ting blir sendt til
+            Log.e("TAG", params[1]); // logger hva som blr sendt
             String data = "";
 
             HttpURLConnection httpURLConnection = null;
@@ -353,10 +374,10 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
 
                 httpURLConnection.setDoOutput(true);
 
-                DataOutputStream wr = new DataOutputStream(httpURLConnection.getOutputStream());
-                wr.writeBytes("PostData=" + params[1]);
-                wr.flush();
-                wr.close();
+                DataOutputStream output = new DataOutputStream(httpURLConnection.getOutputStream());
+                output.writeBytes(params[1]);
+                output.flush();
+                output.close();
 
                 InputStream in = httpURLConnection.getInputStream();
                 InputStreamReader inputStreamReader = new InputStreamReader(in);
@@ -374,14 +395,13 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
                     httpURLConnection.disconnect();
                 }
             }
-
             return data;
         }
 
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
-            Log.e("TAG", result); // this is expecting a response code to be sent from your server upon receiving the POST data
+            Log.e("AsyncPost", result); // logger response fra server hvis den blir sendt
         }
     }//end async post
 
