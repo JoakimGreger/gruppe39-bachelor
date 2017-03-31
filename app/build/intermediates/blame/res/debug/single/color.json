@@ -1,186 +1,94 @@
 [
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_tint.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\color\\common_google_signin_btn_tint.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/abc_primary_text_material_light.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/abc_primary_text_material_dark.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_btn_checkable.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_tint_btn_checkable.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/abc_hint_foreground_material_dark.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_light.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\switch_thumb_material_light.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/switch_thumb_material_dark.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_text_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_btn_colored_text_material.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/bim/.android/build-cache/fdd53e61a6c828973193b1d2cf8cebc95ad0a071/output/res/color/common_google_signin_btn_text_dark.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_dark.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_secondary_text_material_dark.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/abc_tint_default.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_btn_colored_borderless_text_material.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/abc_btn_colored_text_material.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/abc_btn_colored_text_material.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_edittext.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_tint_edittext.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
+        "source": "/Users/bim/.android/build-cache/fdd53e61a6c828973193b1d2cf8cebc95ad0a071/output/res/color/common_google_signin_btn_text_light.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_seek_thumb.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_tint_seek_thumb.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_dark.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_hint_foreground_material_dark.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
+        "source": "/Users/bim/.android/build-cache/fdd53e61a6c828973193b1d2cf8cebc95ad0a071/output/res/color/common_google_signin_btn_tint.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_search_url_text.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_search_url_text.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/abc_tint_switch_thumb.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/abc_tint_switch_thumb.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_light.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_primary_text_material_light.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/abc_secondary_text_material_dark.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_btn_colored_borderless_text_material.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/abc_tint_spinner.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_light.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_primary_text_material_light.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/abc_tint_edittext.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/abc_tint_edittext.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_spinner.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_tint_spinner.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/abc_tint_btn_checkable.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/abc_tint_btn_checkable.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_dark.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_secondary_text_material_dark.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/abc_search_url_text.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_light.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\color\\common_google_signin_btn_text_light.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_secondary_text_material_light.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/abc_tint_switch_track.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_dark.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_primary_text_material_dark.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/abc_secondary_text_material_light.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_thumb.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_tint_switch_thumb.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/abc_btn_colored_borderless_text_material.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_text_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_btn_colored_text_material.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/switch_thumb_material_light.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_dark.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\switch_thumb_material_dark.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/abc_primary_text_disable_only_material_light.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_light.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_hint_foreground_material_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_dark.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_hint_foreground_material_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_btn_checkable.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_tint_btn_checkable.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_dark.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_primary_text_material_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_thumb.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_tint_switch_thumb.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_default.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_tint_default.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_edittext.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_tint_edittext.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_light.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_hint_foreground_material_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_dark.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\color\\common_google_signin_btn_text_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_track.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_tint_switch_track.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_default.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_tint_default.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_track.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_tint_switch_track.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_light.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\switch_thumb_material_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_seek_thumb.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_tint_seek_thumb.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_search_url_text.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_search_url_text.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_spinner.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_tint_spinner.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_light.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\color\\common_google_signin_btn_text_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_secondary_text_material_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_primary_text_disable_only_material_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_dark.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\color\\common_google_signin_btn_text_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_tint.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\color\\common_google_signin_btn_tint.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_dark.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color\\switch_thumb_material_dark.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/color/abc_hint_foreground_material_light.xml"
     }
 ]

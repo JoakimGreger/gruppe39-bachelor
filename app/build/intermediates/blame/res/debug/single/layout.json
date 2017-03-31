@@ -1,354 +1,178 @@
 [
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/notification_template_part_time.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/activity_emoji.xml",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/src/main/res/layout/activity_emoji.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_media.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_action_bar_up_container.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_action_tombstone.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/activity_score.xml",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/src/main/res/layout/activity_score.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/notification_action_tombstone.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/notification_action_tombstone.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_mode_bar.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_popup_menu_header_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_media_custom.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_action_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/notification_action.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/notification_action.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_menu_layout.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_screen_toolbar.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_screen_toolbar.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_search_view.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_list_menu_item_layout.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_action_menu_layout.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_menu_item_layout.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/notification_template_media_custom.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/notification_template_media_custom.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_score.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\src\\main\\res\\layout\\activity_score.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_alert_dialog_material.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_action.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_list_menu_item_icon.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_second.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\src\\main\\res\\layout\\activity_second.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_select_dialog_material.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_screen_toolbar.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_action_mode_bar.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_emoji.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\src\\main\\res\\layout\\activity_emoji.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_expanded_menu_layout.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_lines_media.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_lines_media.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/notification_template_part_chronometer.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_second.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\src\\main\\res\\layout\\activity_second.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_bar_up_container.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_screen_simple.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/notification_template_icon_group.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/notification_template_icon_group.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/notification_template_media.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_score.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\src\\main\\res\\layout\\activity_score.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/select_dialog_multichoice_material.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_alert_dialog_material.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_action_bar_title_item.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_search_view.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_list_menu_item_layout.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_screen_content_include.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_bar_title_item.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_activity_chooser_view.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/notification_template_lines_media.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_emoji.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\src\\main\\res\\layout\\activity_emoji.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/select_dialog_item_material.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_title_material.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_part_chronometer.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_activity_chooser_view.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/activity_drag.xml",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/src/main/res/layout/activity_drag.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_menu_layout.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_dialog_title_material.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\select_dialog_multichoice_material.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_list_menu_item_radio.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\select_dialog_item_material.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_icon_group.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_list_menu_item_icon.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_dialog_title_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_menu_item_layout.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_select_dialog_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_media.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_bar_title_item.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_alert_dialog_title_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\select_dialog_singlechoice_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_media_custom.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_expanded_menu_layout.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\select_dialog_singlechoice_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_action.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_alert_dialog_title_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_activity_chooser_view.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_popup_menu_header_item_layout.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_part_chronometer.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_screen_content_include.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_select_dialog_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_icon_group.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_screen_content_include.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_expanded_menu_layout.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_part_time.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_drag.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\src\\main\\res\\layout\\activity_drag.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_alert_dialog_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_bar_up_container.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\select_dialog_multichoice_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_search_view.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_mode_close_item_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_dialog_title_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_mode_close_item_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_screen_simple.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_mode_bar.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\select_dialog_item_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_screen_simple.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_part_time.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_drag.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\src\\main\\res\\layout\\activity_drag.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_action_tombstone.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_list_menu_item_radio.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout/activity_second.xml",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/src/main/res/layout/activity_second.xml"
     }
 ]

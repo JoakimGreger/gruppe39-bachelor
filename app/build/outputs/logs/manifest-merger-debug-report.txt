@@ -1,145 +1,145 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:2:1-41:12
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:2:1-41:12
 	package
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:3:5-39
-		INJECTED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:3:5-39
+		INJECTED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml
 uses-sdk
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:5:5-8:41
-MERGED from [com.android.support:appcompat-v7:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.0\AndroidManifest.xml:21:5-43
-MERGED from [com.google.android.gms:play-services-location:10.2.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\10.2.0\AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.2.0\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-tasks:10.2.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\10.2.0\AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-basement:10.2.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.2.0\AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:support-v4:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.0\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.0\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.0\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.0\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.0\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\AndroidManifest.xml:21:5-23:58
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:5:5-8:41
+MERGED from [com.android.support:appcompat-v7:25.1.0] /Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] /Users/bim/.android/build-cache/a2f0eeccda4c4cd32816486bdb05f8d27fcbe13a/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.1.0] /Users/bim/.android/build-cache/a548a850e899eece006ec32eb8fb247f7f7d71e3/output/AndroidManifest.xml:21:5-43
+MERGED from [com.google.android.gms:play-services-location:10.2.0] /Users/bim/.android/build-cache/80832c47219d1db8fad5a1a1206475ad99dfb6a9/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-base:10.2.0] /Users/bim/.android/build-cache/fdd53e61a6c828973193b1d2cf8cebc95ad0a071/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/bim/.android/build-cache/43c56726cf53dfcb533039f1ccfa83b4c0c99021/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/bim/.android/build-cache/dfc8ff9c440d7ef1ec3b12981fb87a92befea686/output/AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:25.1.0] /Users/bim/.android/build-cache/6faaa68c347d83ab3b2575f76e2944f40b8e713a/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.1.0] /Users/bim/.android/build-cache/d171239759f2598f0ba93c072c527023ac4e6831/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.1.0] /Users/bim/.android/build-cache/aa996c733f56512ab07d661ee577ba8096749d2a/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.1.0] /Users/bim/.android/build-cache/286f2c94e9da6b307992b47862f0844c2e28e418/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.1.0] /Users/bim/.android/build-cache/9e02bcf9766fb5385eac9e2a3dc30fd11842cb1a/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.1.0] /Users/bim/.android/build-cache/272a15231065e5ef874c3ba4001d2df1b44602ba/output/AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:25.1.0] /Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/AndroidManifest.xml:23:9-75
 	android:maxSdkVersion
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:6:9-35
 	android:targetSdkVersion
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:8:9-38
-		INJECTED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:8:9-38
+		INJECTED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:7:9-35
-		INJECTED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:7:9-35
+		INJECTED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:10:5-81
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:10:5-81
 	android:name
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:10:22-78
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:10:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:11:5-79
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:11:22-76
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:11:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:12:5-81
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:12:5-81
 	android:name
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:12:22-78
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:12:22-78
 uses-permission#android.permission.VIBRATE
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:13:5-66
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:13:5-66
 	android:name
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:13:22-63
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:13:22-63
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:14:5-67
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:14:5-67
 	android:name
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:14:22-64
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:14:22-64
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:15:5-75
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:15:5-75
 	android:name
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:15:22-72
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:15:22-72
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:16:5-80
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:16:5-80
 	android:name
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:16:22-77
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:16:22-77
 application
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:18:5-39:19
-MERGED from [com.android.support:appcompat-v7:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.0\AndroidManifest.xml:23:5-20
-MERGED from [com.google.android.gms:play-services-location:10.2.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\10.2.0\AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.2.0\AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-tasks:10.2.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\10.2.0\AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:10.2.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.2.0\AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:support-v4:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.1.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\AndroidManifest.xml:25:5-20
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:18:5-39:19
+MERGED from [com.android.support:appcompat-v7:25.1.0] /Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] /Users/bim/.android/build-cache/a2f0eeccda4c4cd32816486bdb05f8d27fcbe13a/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.0] /Users/bim/.android/build-cache/a548a850e899eece006ec32eb8fb247f7f7d71e3/output/AndroidManifest.xml:23:5-20
+MERGED from [com.google.android.gms:play-services-location:10.2.0] /Users/bim/.android/build-cache/80832c47219d1db8fad5a1a1206475ad99dfb6a9/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-base:10.2.0] /Users/bim/.android/build-cache/fdd53e61a6c828973193b1d2cf8cebc95ad0a071/output/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/bim/.android/build-cache/43c56726cf53dfcb533039f1ccfa83b4c0c99021/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/bim/.android/build-cache/dfc8ff9c440d7ef1ec3b12981fb87a92befea686/output/AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:25.1.0] /Users/bim/.android/build-cache/6faaa68c347d83ab3b2575f76e2944f40b8e713a/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.1.0] /Users/bim/.android/build-cache/d171239759f2598f0ba93c072c527023ac4e6831/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.1.0] /Users/bim/.android/build-cache/aa996c733f56512ab07d661ee577ba8096749d2a/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.1.0] /Users/bim/.android/build-cache/286f2c94e9da6b307992b47862f0844c2e28e418/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.1.0] /Users/bim/.android/build-cache/9e02bcf9766fb5385eac9e2a3dc30fd11842cb1a/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.1.0] /Users/bim/.android/build-cache/272a15231065e5ef874c3ba4001d2df1b44602ba/output/AndroidManifest.xml:25:5-20
 	android:screenOrientation
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:22:9-45
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:22:9-45
 	android:label
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:21:9-34
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:21:9-34
 	android:supportsRtl
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:23:9-35
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:23:9-35
 	android:allowBackup
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:19:9-35
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:19:9-35
 	android:icon
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:20:9-40
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:20:9-40
 	android:theme
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:24:9-40
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:24:9-40
 activity#com.example.joakim.ceapp.MainActivity
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:25:9-31:20
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:25:9-31:20
 	android:name
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:25:19-47
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:25:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:26:13-30:29
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:26:13-30:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:27:17-69
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:27:17-69
 	android:name
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:27:25-66
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:27:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:29:17-77
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:29:17-77
 	android:name
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:29:27-74
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:29:27-74
 activity#com.example.joakim.ceapp.SecondActivity
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:32:9-52
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:32:9-52
 	android:name
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:32:19-49
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:32:19-49
 activity#com.example.joakim.ceapp.DragActivity
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:33:9-50
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:33:9-50
 	android:name
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:33:19-47
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:33:19-47
 activity#com.example.joakim.ceapp.ScoreActivity
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:34:9-51
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:34:9-51
 	android:name
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:34:19-48
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:34:19-48
 service#com.example.joakim.ceapp.LocationService
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:36:9-52
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:36:9-52
 	android:name
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:36:18-49
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:36:18-49
 activity#com.example.joakim.ceapp.EmojiActivity
-ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:38:9-60
+ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:38:9-60
 	android:name
-		ADDED from C:\Users\pedjo\Documents\gruppe39-bachelor\app\src\main\AndroidManifest.xml:38:19-48
+		ADDED from /Users/bim/Arbeid/android/CEMLocate/app/src/main/AndroidManifest.xml:38:19-48
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.2.0\AndroidManifest.xml:19:9-172
+ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/bim/.android/build-cache/fdd53e61a6c828973193b1d2cf8cebc95ad0a071/output/AndroidManifest.xml:19:9-172
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.2.0\AndroidManifest.xml:19:146-170
+		ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/bim/.android/build-cache/fdd53e61a6c828973193b1d2cf8cebc95ad0a071/output/AndroidManifest.xml:19:146-170
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.2.0\AndroidManifest.xml:19:86-145
+		ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/bim/.android/build-cache/fdd53e61a6c828973193b1d2cf8cebc95ad0a071/output/AndroidManifest.xml:19:86-145
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.2.0\AndroidManifest.xml:19:19-85
+		ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/bim/.android/build-cache/fdd53e61a6c828973193b1d2cf8cebc95ad0a071/output/AndroidManifest.xml:19:19-85
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:10.2.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.2.0\AndroidManifest.xml:20:9-121
+ADDED from [com.google.android.gms:play-services-basement:10.2.0] /Users/bim/.android/build-cache/dfc8ff9c440d7ef1ec3b12981fb87a92befea686/output/AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:10.2.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.2.0\AndroidManifest.xml:20:66-119
+		ADDED from [com.google.android.gms:play-services-basement:10.2.0] /Users/bim/.android/build-cache/dfc8ff9c440d7ef1ec3b12981fb87a92befea686/output/AndroidManifest.xml:20:66-119
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:10.2.0] C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.2.0\AndroidManifest.xml:20:20-65
+		ADDED from [com.google.android.gms:play-services-basement:10.2.0] /Users/bim/.android/build-cache/dfc8ff9c440d7ef1ec3b12981fb87a92befea686/output/AndroidManifest.xml:20:20-65

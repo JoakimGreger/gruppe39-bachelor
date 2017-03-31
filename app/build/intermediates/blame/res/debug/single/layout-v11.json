@@ -1,50 +1,26 @@
 [
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout-v11\\notification_template_big_media.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_action.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout-v11\\notification_media_action.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout-v11/notification_media_action.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_custom.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout-v11\\notification_template_big_media_custom.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout-v11/notification_template_big_media_custom.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout-v11\\notification_template_big_media_narrow.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout-v11/notification_media_cancel_action.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_action.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout-v11\\notification_media_action.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout-v11/notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_cancel_action.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout-v11\\notification_media_cancel_action.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow_custom.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout-v11\\notification_template_big_media_narrow_custom.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_cancel_action.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout-v11\\notification_media_cancel_action.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_custom.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout-v11\\notification_template_big_media_custom.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout-v11\\notification_template_big_media_narrow.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout-v11\\notification_template_big_media.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow_custom.xml",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout-v11\\notification_template_big_media_narrow_custom.xml"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/Users/bim/.android/build-cache/841c6d47439a7fc0ef9d29f48bc66328a7f7a7a4/output/res/layout-v11/notification_template_big_media.xml"
     }
 ]

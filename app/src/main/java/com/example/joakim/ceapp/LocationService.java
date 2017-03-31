@@ -47,7 +47,7 @@ import java.util.List;
  * Created by pedjo on 01-Mar-17.
  */
 
-public class LocationService extends Service implements LocationListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+public class  LocationService extends Service implements LocationListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
     //location variabler
     private GoogleApiClient mGoogleApiClient;
     private LocationRequest mLocationRequest;

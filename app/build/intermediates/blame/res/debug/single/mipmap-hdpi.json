@@ -1,82 +1,42 @@
 [
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\app_icon.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\src\\main\\res\\mipmap-hdpi\\app_icon.png"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/mipmap-hdpi/happy_smiley.png",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/src/main/res/mipmap-hdpi/happy_smiley.png"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_score_bilde.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\src\\main\\res\\mipmap-hdpi\\ic_score_bilde.png"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/mipmap-hdpi/ph_picture.png",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/src/main/res/mipmap-hdpi/ph_picture.png"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\neutral_smiley.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\src\\main\\res\\mipmap-hdpi\\neutral_smiley.png"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/mipmap-hdpi/smile_smiley.png",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/src/main/res/mipmap-hdpi/smile_smiley.png"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_celogo.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\src\\main\\res\\mipmap-hdpi\\ic_celogo.png"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/mipmap-hdpi/sad_smiley.png",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/src/main/res/mipmap-hdpi/sad_smiley.png"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/mipmap-hdpi/neutral_smiley.png",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/src/main/res/mipmap-hdpi/neutral_smiley.png"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\app_icon.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\src\\main\\res\\mipmap-hdpi\\app_icon.png"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_celogo.png",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/src/main/res/mipmap-hdpi/ic_celogo.png"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\neutral_smiley.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\src\\main\\res\\mipmap-hdpi\\neutral_smiley.png"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_score_bilde.png",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/src/main/res/mipmap-hdpi/ic_score_bilde.png"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\happy_smiley.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\src\\main\\res\\mipmap-hdpi\\happy_smiley.png"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/mipmap-hdpi/app_icon.png",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/src/main/res/mipmap-hdpi/app_icon.png"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\sad_smiley.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\src\\main\\res\\mipmap-hdpi\\sad_smiley.png"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ph_picture.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\src\\main\\res\\mipmap-hdpi\\ph_picture.png"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_score_bilde.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\src\\main\\res\\mipmap-hdpi\\ic_score_bilde.png"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\frown_smiley.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\src\\main\\res\\mipmap-hdpi\\frown_smiley.png"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\sad_smiley.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\src\\main\\res\\mipmap-hdpi\\sad_smiley.png"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\smile_smiley.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\src\\main\\res\\mipmap-hdpi\\smile_smiley.png"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\happy_smiley.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\src\\main\\res\\mipmap-hdpi\\happy_smiley.png"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ph_picture.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\src\\main\\res\\mipmap-hdpi\\ph_picture.png"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\frown_smiley.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\src\\main\\res\\mipmap-hdpi\\frown_smiley.png"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\smile_smiley.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\src\\main\\res\\mipmap-hdpi\\smile_smiley.png"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_celogo.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\src\\main\\res\\mipmap-hdpi\\ic_celogo.png"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/mipmap-hdpi/frown_smiley.png",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/src/main/res/mipmap-hdpi/frown_smiley.png"
     }
 ]

@@ -1,42 +1,22 @@
 [
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_happyface.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_happyface.png"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/drawable-ldpi/ic_madface.png",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/build/generated/res/pngs/debug/drawable-ldpi/ic_madface.png"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_madface.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_madface.png"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/drawable-ldpi/ic_happyface.png",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/build/generated/res/pngs/debug/drawable-ldpi/ic_happyface.png"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_neutralface.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_neutralface.png"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/drawable-ldpi/ic_neutralface.png",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/build/generated/res/pngs/debug/drawable-ldpi/ic_neutralface.png"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_smileface.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_smileface.png"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/drawable-ldpi/ic_sadface.png",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/build/generated/res/pngs/debug/drawable-ldpi/ic_sadface.png"
     },
     {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_sadface.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_sadface.png"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_madface.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_madface.png"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_happyface.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_happyface.png"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_smileface.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\CEapp\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_smileface.png"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_neutralface.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_neutralface.png"
-    },
-    {
-        "merged": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_sadface.png",
-        "source": "C:\\Users\\pedjo\\Documents\\gruppe39-bachelor\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_sadface.png"
+        "merged": "/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/res/merged/debug/drawable-ldpi/ic_smileface.png",
+        "source": "/Users/bim/Arbeid/android/CEMLocate/app/build/generated/res/pngs/debug/drawable-ldpi/ic_smileface.png"
     }
 ]

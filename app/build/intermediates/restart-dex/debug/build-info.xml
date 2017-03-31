@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="armeabi-v7a,armeabi"
-    api-level="24"
-    density="560dpi"
-    format="8"
-    plugin-version="2.2.3"
-    timestamp="1821125979889710"
-    token="-5499482742519196926" >
+    api-level="21"
+    build-mode="COLD"
+    density="xxhdpi"
+    format="10"
+    plugin-version="2.3.0"
+    timestamp="1490183326822"
+    token="-7032701784795646157"
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
@@ -22,19 +24,49 @@
         duration="0" />
 
     <build
-        timestamp="1817496955701446"
+        build-mode="FULL"
+        timestamp="1490182673587"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\outputs\apk\app-debug.apk"
-            type="MAIN" />
+            location="/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/bim/Arbeid/android/CEMLocate/app/build/outputs/apk/app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
     <build
-        timestamp="1821111695656975"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\pedjo\Documents\gruppe39-bachelor\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
-            type="DEX" />
-    </build>
-    <build timestamp="1821125979889710" />
+        build-mode="COLD"
+        timestamp="1490183326822"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>
