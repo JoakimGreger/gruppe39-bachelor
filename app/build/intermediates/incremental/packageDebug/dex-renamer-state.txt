@@ -1,7 +1,0 @@
-#Wed Mar 22 12:39:36 CET 2017
-base.0=/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a8b17a335a098c902662b12a34e1ffdb47398258
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_ac04e42e16f5f1cce5247338028f604fecd7c42d/classes.dex
-base.1=/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_ac04e42e16f5f1cce5247338028f604fecd7c42d
-file.0=/Users/bim/Arbeid/android/CEMLocate/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a8b17a335a098c902662b12a34e1ffdb47398258/classes.dex
