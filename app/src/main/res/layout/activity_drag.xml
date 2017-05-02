@@ -63,6 +63,7 @@
     <TextView
         android:layout_height="wrap_content"
         android:id="@+id/innholdTxt"
+        android:textAlignment="center"
         android:textColor="#6393C3"
         android:padding="5dp"
         android:layout_width="wrap_content"

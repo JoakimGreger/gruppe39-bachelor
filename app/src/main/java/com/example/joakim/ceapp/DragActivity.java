@@ -213,7 +213,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
     public void generateQuestions(){
         innholdTxt.setText(question.get(q));
 
-        //test for å unngå crash når det er kun 1 sprsm i listen
+        //for å unngå crash når det er kun 1 sprsm i listen
         if (question.size() == 1){
             nextBtn.setVisibility(View.GONE);
             doneBtn.setVisibility(View.VISIBLE);
@@ -229,7 +229,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
                     answersArray.put(obj);
 
                     Log.e("Exception", answersArray.toString());
-                    Toast.makeText(DragActivity.this, "", Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(DragActivity.this, "", Toast.LENGTH_SHORT).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -288,11 +288,20 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         SharedPreferences startscore = this.getSharedPreferences("qScore", Context.MODE_PRIVATE);
         int firstscore = startscore.getInt("qScore", 0);
 
-        //Lagrer tidligere score + nye score som kan hentes på alle activities med riktig key (qScore)
+        //Henter antall besvareler
+        SharedPreferences answers = this.getSharedPreferences("qAnswer", Context.MODE_PRIVATE);
+        int answerAmount = answers.getInt("qAnswer", 0);
+
+        //Lagrer tidligere score + nye score samt antall besvarelser som kan hentes på alle activities med riktig key (qScore eller qAnswer)
         SharedPreferences prefs = this.getSharedPreferences("qScore", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt("qScore", (firstscore + score));
         editor.commit();
+
+        SharedPreferences prefsX = this.getSharedPreferences("qAnswer", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editorX = prefsX.edit();
+        editorX.putInt("qAnswer",(answerAmount + 1));
+        editorX.commit();
     }
 
     public void storeData(String data) {

@@ -15,9 +15,11 @@ import java.util.Random;
 public class ScoreActivity extends AppCompatActivity {
 
     TextView scoreTxt;
+    TextView answerTxt;
     ImageView img;
     Button resetBtn;
     int score;
+    int answers;
 
     int scorePics[] = {
             R.drawable.score_bilde,
@@ -31,6 +33,7 @@ public class ScoreActivity extends AppCompatActivity {
         super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
+        answerTxt = (TextView) findViewById(R.id.answerTxt);
         scoreTxt = (TextView) findViewById(R.id.scoreTxt);
         img =(ImageView) findViewById(R.id.img);
         resetBtn = (Button) findViewById(R.id.resetBtn);
@@ -38,6 +41,10 @@ public class ScoreActivity extends AppCompatActivity {
         SharedPreferences prefs = this.getSharedPreferences("qScore", Context.MODE_PRIVATE);
         score = prefs.getInt("qScore", 0);
 
+        SharedPreferences prefsX = this.getSharedPreferences("qAnswer", Context.MODE_PRIVATE);
+        answers = prefsX.getInt("qAnswer",0);
+
+        answerTxt.setText("Antall besvarelser: " + answers );
         scoreTxt.setText("Din score: " + score);
 
         //en random for tilfeldig score bilde
@@ -64,6 +71,10 @@ public class ScoreActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt("qScore",0);
         editor.commit();
+        SharedPreferences prefsX = this.getSharedPreferences("qAnswer", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editorX = prefsX.edit();
+        editorX.putInt("qAnswer", 0);
+        editorX.commit();
         finish();
     }
 }
