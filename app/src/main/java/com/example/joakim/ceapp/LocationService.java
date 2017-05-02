@@ -9,8 +9,10 @@ import android.content.Context;
 import android.content.Intent;
 
 import android.content.pm.PackageManager;
+import android.location.Criteria;
 import android.location.Location;
 
+import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -20,6 +22,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.NotificationCompat;
 
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -50,17 +53,18 @@ import java.util.List;
 public class  LocationService extends Service implements LocationListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
     //location variabler
     private GoogleApiClient mGoogleApiClient;
+    private LocationManager lm;
     private LocationRequest mLocationRequest;
     private Location mLastLocation;
+    private String provider;
+    private String currentId;
     //notification variabler
 
     //JSON variabler
     List<Double> latitude = new ArrayList<>();
     List<Double> longitude = new ArrayList<>();
     List<String> title = new ArrayList<>();
-    //List<String> questions = new ArrayList<>();
-    //private Double[] latitude;
-    //private Double[] longitude;
+    List<String> id = new ArrayList<>();
 
     public LocationService() {
 
@@ -70,6 +74,7 @@ public class  LocationService extends Service implements LocationListener, Googl
     public void onCreate() {
         new getJSON().execute("http://webapp.bimorstad.tech/usertest/read");
         super.onCreate();
+        Log.e("Exception", "Location Service started");
 
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addApi(LocationServices.API).
@@ -97,7 +102,7 @@ public class  LocationService extends Service implements LocationListener, Googl
             StringBuilder builder = new StringBuilder();
             BufferedReader reader = null;
             HttpURLConnection connection = null;
-            try{
+            try {
                 String address = params[0];
                 URL url = new URL(address);
                 connection = (HttpURLConnection) url.openConnection();
@@ -107,11 +112,11 @@ public class  LocationService extends Service implements LocationListener, Googl
                 while ((line=reader.readLine())!= null){
                     builder.append(line);
                 }
-            }catch (MalformedURLException e){
+            } catch (MalformedURLException e){
                 e.printStackTrace();
-            }catch (IOException e){
+            } catch (IOException e){
                 e.printStackTrace();
-            }finally {
+            } finally {
                 if (connection != null){
                     connection.disconnect();
                 }
@@ -134,6 +139,7 @@ public class  LocationService extends Service implements LocationListener, Googl
                     latitude.add(obj.getDouble("latitude"));
                     longitude.add(obj.getDouble("longitude"));
                     title.add(obj.getString("title"));
+                    id.add(obj.getString("Id"));
                     //questions.add(obj.getString("Questions"));
 
                 }
@@ -163,6 +169,7 @@ public class  LocationService extends Service implements LocationListener, Googl
                 Location.distanceBetween(mLastLocation.getLatitude(), mLastLocation.getLongitude(), latitude.get(i), longitude.get(i), dist);
                 if (dist[0] < 50) {
                     final int finalI = i;
+                    currentId = id.get(finalI);
                     // countdown for 7 minutter
                     new CountDownTimer(5000, 1000) {
                         @Override
@@ -239,6 +246,7 @@ public class  LocationService extends Service implements LocationListener, Googl
         int NOTIFICATION_ID = 12345;
 
         Intent targetIntent = new Intent(this, DragActivity.class);
+        targetIntent.putExtra("id", currentId);
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0, targetIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         builder.setContentIntent(contentIntent);
         NotificationManager nManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
@@ -248,6 +256,6 @@ public class  LocationService extends Service implements LocationListener, Googl
 
     }
 
-    }
+}
 
 

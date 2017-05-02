@@ -15,6 +15,7 @@ import android.location.LocationManager;
 import android.media.Image;
 import android.os.AsyncTask;
 import android.os.Environment;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -91,6 +92,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
     };
     //Variabler for lokasjonssjekking
     private GoogleApiClient mGoogleApiClient;
+    private String usertestId;
     private Location mLastLocation;
     private String mLatitudeText;
     private String mLongitudeText;
@@ -104,17 +106,18 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
     int index = 0;
     List<String> questionList = new ArrayList<>();
     String id;
-    JSONObject answers = new JSONObject();
+
     JSONArray answersArray = new JSONArray();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        new getJSON().execute("http://webapp.bimorstad.tech/usertest/read");
         super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drag);
-
+        Intent intent = getIntent();
+        usertestId = intent.getStringExtra("id");
+        new getJSON().execute("http://webapp.bimorstad.tech/usertest/show?t=" + usertestId);
 
         // Googles Api client
         if (mGoogleApiClient == null) {
@@ -146,34 +149,6 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         handImg.setImageResource(R.drawable.hand);
         smileyImg.setImageResource(R.drawable.neutralface);
         startHandAnims();
-
-        /*
-        //Gjemmer nextBtn og viser doneBtn
-        nextBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startFadeAnims();
-                qOne = i;
-                //doneBtn.setVisibility(View.VISIBLE);
-                nextBtn.setVisibility(View.GONE);
-                i = 2;
-            }
-        });
-
-        //Lagrer data og setter en score onClick
-        doneBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                qTwo = i;
-                long date = System.currentTimeMillis();
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                String dateString = sdf.format(date);
-                storeScore(50);
-                createNotification(v);
-                storeData(dateString + "," + qOne + "," + qTwo + "," + mLatitudeText + "," + mLongitudeText); // Lagrer svaret med dato og svar nummer
-            }
-        });
-        */
 
     }
 
@@ -217,23 +192,18 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         protected void onPostExecute(String result){
             super.onPostExecute(result);
             try{
-                JSONArray json = new JSONArray(result);
-                for (int i = 0; i < json.length(); i++){
-                    JSONObject obj = json.getJSONObject(i);
-                    if (obj.getDouble("latitude") == latitude && obj.getDouble("longitude") == longitude) {
-                        questions = obj.getJSONArray("questions");
-                        id = obj.getString("Id");
-                        for (int k = 0; k < questions.length(); k++) {
-                            JSONObject test = questions.getJSONObject(k);
-                            question.add(test.getString("question"));
-                        }
-                    }
-
+                JSONObject obj = new JSONObject(result);
+                questions = obj.getJSONArray("questions");
+                question.clear();
+                id = obj.getString("Id");
+                for (int i = 0; i < questions.length(); i++) {
+                    JSONObject q = questions.getJSONObject(i);
+                    question.add(q.getString("question"));
                 }
-                // for å sjekke i konsoll hvilke sprms vi har
-                Log.d("TAG", question.toString());
+
+                Log.e("Exception", "2 Questions:" + question.toString());
                 generateQuestions();
-            } catch (JSONException e) {
+                } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
@@ -253,9 +223,12 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
             @Override
             public void onClick(View v) {
                 try { //putter index og score i en JSON og så i en JSONarray
-                    answers.put("index",index);
-                    answers.put("score",i);
-                    answersArray.put(answers);
+                    JSONObject obj = new JSONObject();
+                    obj.put("index",index);
+                    obj.put("score",i);
+                    answersArray.put(obj);
+
+                    Log.e("Exception", answersArray.toString());
                     Toast.makeText(DragActivity.this, "", Toast.LENGTH_SHORT).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -281,13 +254,16 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
                 }
             }
         });
+
         doneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try { //putter index og score i en JSON og så i en JSONarray
-                    answers.put("index",index);
-                    answers.put("score",i);
-                    answersArray.put(answers);
+                    JSONObject obj = new JSONObject();
+                    obj.put("index",index);
+                    obj.put("score",i);
+                    answersArray.put(obj);
+                    Log.e("Exception", answersArray.toString());
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -361,8 +337,6 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
 
         @Override
         protected String doInBackground(String... params) {
-            Log.e("TAG", params[0]); // logger siden ting blir sendt til
-            Log.e("TAG", params[1]); // logger hva som blr sendt
             String data = "";
 
             HttpURLConnection httpURLConnection = null;
@@ -560,6 +534,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
     public void onResume() {
         super.onResume();
         mGoogleApiClient.connect();
+        new getJSON().execute("http://webapp.bimorstad.tech/usertest/show?t=" + usertestId);
     }
 
     @Override
@@ -611,8 +586,8 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         }
 
     }
+
     private void handleNewLocation(Location location) {
-        Log.d(TAG, location.toString());
         mLatitudeText = (String.valueOf(mLastLocation.getLatitude()));
         mLongitudeText = (String.valueOf(mLastLocation.getLongitude()));
     }

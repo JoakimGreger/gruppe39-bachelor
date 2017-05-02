@@ -50,11 +50,7 @@ public class MainActivity extends AppCompatActivity {
             buttonButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (Cords.getInstance().getLatitude() != null) {
-                        switchActivityDrag();
-                    } else {
-                        Toast.makeText(MainActivity.this, "Du har desverre ikke fått en undersøkelse ennå. Sjekk igjen senere", Toast.LENGTH_LONG).show();
-                    }
+                    switchActivityDrag();
                 }
             });
         scoreBtn.setOnClickListener(new View.OnClickListener() {
@@ -67,28 +63,14 @@ public class MainActivity extends AppCompatActivity {
 }
 
     private void switchActivityDrag(){
-        if(ContextCompat.checkSelfPermission(this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                == PackageManager.PERMISSION_GRANTED) {
-            Intent intent = new Intent(this, DragActivity.class);
-            startActivity(intent);
-        } else {
-            askForStoragePermission();
-        }
+        Intent intent = new Intent(this, LocationMapsActivity.class);
+        startActivity(intent);
     }
     private void switchActivityScore(){
         Intent intent = new Intent(this, ScoreActivity.class);
         startActivity(intent);
     }
 
-    public void askForStoragePermission(){
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-        }
-    }
     public void askForLocationPermission(){
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION)
