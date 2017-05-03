@@ -1,7 +1,5 @@
 package com.example.joakim.ceapp;
 
-import android.*;
-import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -9,11 +7,9 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.AsyncTask;
-import android.os.CountDownTimer;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
@@ -27,6 +23,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -42,7 +39,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.jar.*;
+import java.util.Calendar;
 
 public class LocationMapsActivity extends FragmentActivity implements OnMapReadyCallback, LocationListener, GoogleMap.OnMarkerClickListener {
 
@@ -63,6 +60,8 @@ public class LocationMapsActivity extends FragmentActivity implements OnMapReady
         markers = new ArrayList<Marker>();
         activeM = new ArrayList<String>();
 
+
+
         lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         Criteria criteria = new Criteria();
 
@@ -75,6 +74,7 @@ public class LocationMapsActivity extends FragmentActivity implements OnMapReady
             mLastLocation = lm.getLastKnownLocation(provider);
             Log.e("Exception", "Location: " + mLastLocation.getLatitude());
         }
+
         /*
         Log.d("I", "onCreate");
         System.out.println("ONCREATE CALLED");
@@ -115,6 +115,13 @@ public class LocationMapsActivity extends FragmentActivity implements OnMapReady
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        int hourOfDay = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+        if (hourOfDay >= 20 || hourOfDay <=4){
+            mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this,R.raw.style_night_json));
+        } if (hourOfDay >= 5 || hourOfDay < 20) {
+            mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this,R.raw.style_day_json));
+        }
+
         if (ContextCompat.checkSelfPermission(this,
                 android.Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED){
