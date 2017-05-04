@@ -10,6 +10,9 @@ import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -28,10 +31,10 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
 
-
     private Button buttonButton;
     private Button scoreBtn;
     private Button emojiButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
@@ -39,10 +42,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         askForLocationPermission();
         //if (isServiceRunning(LocationService.class) == false) {
-            startService(new Intent(this, LocationService.class));
+        startService(new Intent(this, LocationService.class));
         //}
 
-
+        LocationManager mLocationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
         buttonButton = (Button) findViewById(R.id.buttonButton);
         scoreBtn = (Button) findViewById(R.id.scoreBtn);
@@ -50,7 +53,14 @@ public class MainActivity extends AppCompatActivity {
             buttonButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    switchActivityDrag();
+                    final LocationManager manager = (LocationManager) getSystemService( Context.LOCATION_SERVICE );
+                    if (manager.isProviderEnabled( LocationManager.GPS_PROVIDER ) ) {
+                        mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0,
+                                1, mLocationListener);
+                        switchActivityDrag();
+                    } else {
+                        noGpsDialogBox();
+                    }
                 }
             });
         scoreBtn.setOnClickListener(new View.OnClickListener() {
@@ -94,4 +104,43 @@ public class MainActivity extends AppCompatActivity {
         }
         return false;
     }
+    private void noGpsDialogBox() {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Din GPS ser ut til å være slått av. Venligst slå på GPS")
+                .setCancelable(false)
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(@SuppressWarnings("unused") final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                        startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                    }
+                })
+                .setNegativeButton("Avbryt", new DialogInterface.OnClickListener() {
+                    public void onClick(final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                        dialog.cancel();
+                    }
+                });
+        final AlertDialog alert = builder.create();
+        alert.show();
+    }
+
+    private final LocationListener mLocationListener = new LocationListener() {
+        @Override
+        public void onLocationChanged(final Location location) {
+            //your code here
+        }
+
+        @Override
+        public void onStatusChanged(String provider, int status, Bundle extras) {
+
+        }
+
+        @Override
+        public void onProviderEnabled(String provider) {
+
+        }
+
+        @Override
+        public void onProviderDisabled(String provider) {
+
+        }
+    };
 }
