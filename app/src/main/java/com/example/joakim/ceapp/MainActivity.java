@@ -45,19 +45,31 @@ public class MainActivity extends AppCompatActivity {
         startService(new Intent(this, LocationService.class));
         //}
 
-        LocationManager mLocationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+        final LocationManager mLocationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
         buttonButton = (Button) findViewById(R.id.buttonButton);
         scoreBtn = (Button) findViewById(R.id.scoreBtn);
 
-            buttonButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    final LocationManager manager = (LocationManager) getSystemService( Context.LOCATION_SERVICE );
-                    if (manager.isProviderEnabled( LocationManager.GPS_PROVIDER ) ) {
+        buttonButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final LocationManager manager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+                if (manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+                    if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                        // TODO: Consider calling
+                        //    ActivityCompat#requestPermissions
+                        // here to request the missing permissions, and then overriding
+                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                        //                                          int[] grantResults)
+                        // to handle the case where the user grants the permission. See the documentation
+                        // for ActivityCompat#requestPermissions for more details.
                         mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0,
                                 1, mLocationListener);
                         switchActivityDrag();
+
+                        return;
+                    }
+
                     } else {
                         noGpsDialogBox();
                     }
