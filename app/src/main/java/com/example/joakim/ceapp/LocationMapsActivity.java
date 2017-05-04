@@ -72,7 +72,7 @@ public class LocationMapsActivity extends FragmentActivity implements OnMapReady
 
             lm.requestLocationUpdates(provider, 500, 1, this);
             mLastLocation = lm.getLastKnownLocation(provider);
-            Log.e("Exception", "Location: " + mLastLocation.getLatitude());
+            //Log.e("Exception", "Location: " + mLastLocation.getLatitude());
         }
 
         /*
@@ -138,7 +138,7 @@ public class LocationMapsActivity extends FragmentActivity implements OnMapReady
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addApi(LocationServices.API).build();
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude())));
+           mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude())));
 
 
         new LocationsTask().execute("http://webapp.bimorstad.tech/usertest/read");
