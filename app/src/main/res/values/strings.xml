@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">CEapp</string>
     <string name="title_activity_location_maps">Map</string>
+    <string name="title_activity_show_leaderboard">ShowLeaderboardActivity</string>
+    <string name="action_settings">Settings</string>
 </resources>

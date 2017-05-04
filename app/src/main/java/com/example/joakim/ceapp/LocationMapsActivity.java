@@ -19,6 +19,9 @@ import android.util.Log;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import android.location.LocationListener;
+import android.view.View;
+import android.widget.Button;
+
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -66,6 +69,14 @@ public class LocationMapsActivity extends FragmentActivity implements OnMapReady
         lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         Criteria criteria = new Criteria();
 
+
+        Button button = (Button) findViewById(R.id.leaderboardBtn);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent =  new Intent(LocationMapsActivity.this, ShowLeaderboardActivity.class);
+                startActivity(intent);
+            }
+        });
 
         provider = lm.getBestProvider(criteria, false);
 
@@ -149,6 +160,8 @@ public class LocationMapsActivity extends FragmentActivity implements OnMapReady
 
         // new LocationsTask().execute("http://webapp.bimorstad.tech/usertest/read");
     }
+
+
 
     @Override
     public void onLocationChanged(Location location) {

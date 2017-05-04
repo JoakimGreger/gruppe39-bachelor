@@ -16,7 +16,7 @@
 
 
     <Button
-        android:id="@+id/setRangeButton"
+        android:id="@+id/leaderboardBtn"
         android:layout_height="30dp"
         android:layout_width="30dp"
         android:background="@color/colorPrimaryDark"

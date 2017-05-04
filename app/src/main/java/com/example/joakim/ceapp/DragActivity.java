@@ -227,8 +227,6 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
                     obj.put("index",index);
                     obj.put("score",i);
                     answersArray.put(obj);
-
-                    Log.e("Exception", answersArray.toString());
                     // Toast.makeText(DragActivity.this, "", Toast.LENGTH_SHORT).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
