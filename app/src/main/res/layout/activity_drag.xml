@@ -14,66 +14,164 @@
     android:background="@drawable/backgroundimage">
 
 
-
-
-    <ImageView
-        android:id="@+id/smileyImg"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/neutralface"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
-        android:adjustViewBounds="true"
-        android:cropToPadding="false"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
     <TextView
         android:layout_height="wrap_content"
         android:id="@+id/innholdTxt"
         android:textAlignment="center"
         android:textColor="#6393C3"
         android:padding="5dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:textSize="20dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp" />
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"/>
 
+    <RelativeLayout
+        android:id="@+id/dragLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.joakim.ceapp.DragActivity"
+        android:visibility="gone">
 
-    <Button
-        android:text="Neste"
-        android:textColor="#6393C3"
-        android:layout_width="200dp"
-        android:layout_height="35dp"
-        android:id="@+id/nextBtn"
-        android:background="#155965"
-        android:visibility="visible"
-        android:layout_alignBaseline="@+id/doneBtn"
-        android:layout_alignBottom="@+id/doneBtn"
-        android:layout_alignStart="@+id/doneBtn" />
+        <ImageView
+            android:id="@+id/smileyImg"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/neutralface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+        <ImageView
+            app:srcCompat="@drawable/hand"
+            android:id="@+id/handImg"
+            android:adjustViewBounds="false"
+            android:scaleType="fitCenter"
+            android:visibility="visible"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
 
-    <Button
-        android:text="Ferdig"
-        android:id="@+id/doneBtn"
-        android:background="#155965"
-        android:textColor="#6393C3"
-        android:layout_height="35dp"
-        android:layout_width="200dp"
-        android:visibility="invisible"
-        android:layout_marginBottom="39dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        <Button
+            android:text="Neste"
+            android:id="@+id/doneBtn"
+            android:background="#155965"
+            android:textColor="#6393C3"
+            android:layout_height="35dp"
+            android:layout_width="200dp"
+            android:visibility="visible"
+            android:layout_marginBottom="39dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="dragBtnClicked" />
+    </RelativeLayout>
 
-    <ImageView
-        app:srcCompat="@drawable/hand"
-        android:id="@+id/handImg"
-        android:adjustViewBounds="false"
-        android:scaleType="fitCenter"
-        android:visibility="visible"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_width="200dp"
-        android:layout_height="200dp" />
+    <RelativeLayout
+        android:id="@+id/multiplechoiceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/innholdTxt"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/choicesRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentTop="true"
+            >
+            <Button
+                android:id="@+id/choice1Btn"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                android:onClick="answerBtnClicked"
+                />
+            <Button
+                android:id="@+id/choice2Btn"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                android:onClick="answerBtnClicked"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/choicesRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/choicesRow1">
+            <Button
+                android:id="@+id/choice3Btn"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                android:onClick="answerBtnClicked"
+                />
+            <Button
+                android:id="@+id/choice4Btn"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                android:onClick="answerBtnClicked"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/choicesRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/choicesRow2">
+            <Button
+                android:id="@+id/choice5Btn"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                android:onClick="answerBtnClicked"
+                />
+            <Button
+                android:id="@+id/choice6Btn"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                android:onClick="answerBtnClicked"
+                />
+        </LinearLayout>
+  </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/textLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.joakim.ceapp.DragActivity"
+        android:visibility="gone">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType=""
+            android:id="@+id/txtInput"/>
+
+        <Button
+            android:text="Neste"
+            android:textColor="#6393C3"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:id="@+id/textBtn"
+            android:onClick="txtBtnClicked"
+            android:background="#155965"
+            android:layout_marginBottom="39dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+        
+    </RelativeLayout>
 
 </RelativeLayout>

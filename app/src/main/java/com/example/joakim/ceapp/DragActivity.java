@@ -19,19 +19,21 @@ import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.MotionEventCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.app.NotificationCompat;
 import android.util.Log;
 import android.view.GestureDetector;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -59,7 +61,9 @@ import java.net.URL;
 import java.text.CollationElementIterator;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class
@@ -96,12 +100,13 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
     private Location mLastLocation;
     private String mLatitudeText;
     private String mLongitudeText;
+    private RelativeLayout layout;
 
     //Variabler for JSON henting +  spørsmål
     Double latitude = Cords.getInstance().getLatitude();
     Double longitude = Cords.getInstance().getLongitude();
     JSONArray questions = new JSONArray();
-    List<String> question = new ArrayList<>();
+    ArrayList<Question> question = new ArrayList<>();
     int q = 0;
     int index = 0;
     List<String> questionList = new ArrayList<>();
@@ -117,6 +122,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         setContentView(R.layout.activity_drag);
         Intent intent = getIntent();
         usertestId = intent.getStringExtra("id");
+
         new getJSON().execute("http://webapp.bimorstad.tech/usertest/show?t=" + usertestId);
 
         // Googles Api client
@@ -130,7 +136,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
 
         //div knapper og tekstfelt som blir brukt
         innholdTxt = (TextView) findViewById(R.id.innholdTxt);
-        nextBtn = (Button) findViewById(R.id.nextBtn);
+        // nextBtn = (Button) findViewById(R.id.nextBtn);
         doneBtn = (Button) findViewById(R.id.doneBtn);
         detector = new GestureDetector(this, this);
         smileyImg = (ImageView) findViewById(R.id.smileyImg);
@@ -146,9 +152,12 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         notification = new NotificationCompat.Builder(this);
         notification.setAutoCancel(true);
 
+
+        ImageView smileyImg = (ImageView) findViewById(R.id.smileyImg);
+        ImageView handImg = (ImageView) findViewById(R.id.handImg);
+
         handImg.setImageResource(R.drawable.hand);
         smileyImg.setImageResource(R.drawable.neutralface);
-        startHandAnims();
 
     }
 
@@ -171,11 +180,11 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
                 while ((line=reader.readLine())!= null){
                     builder.append(line);
                 }
-            }catch (MalformedURLException e){
+            } catch (MalformedURLException e){
                 e.printStackTrace();
-            }catch (IOException e){
+            } catch (IOException e){
                 e.printStackTrace();
-            }finally {
+            } finally {
                 if (connection != null){
                     connection.disconnect();
                 }
@@ -198,10 +207,8 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
                 id = obj.getString("Id");
                 for (int i = 0; i < questions.length(); i++) {
                     JSONObject q = questions.getJSONObject(i);
-                    question.add(q.getString("question"));
+                    question.add(new Question(q));
                 }
-
-                Log.e("Exception", "2 Questions:" + question.toString());
                 generateQuestions();
                 } catch (JSONException e) {
                 e.printStackTrace();
@@ -209,75 +216,212 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         }
     }
     // slutt hent JSON fra nettside funksjon
-
     public void generateQuestions(){
-        innholdTxt.setText(question.get(q));
 
-        //for å unngå crash når det er kun 1 sprsm i listen
-        if (question.size() == 1){
-            nextBtn.setVisibility(View.GONE);
-            doneBtn.setVisibility(View.VISIBLE);
-        }
+        innholdTxt.setText(question.get(q).getQuestion());
+        if (question.get(q).getType().equals("stemning")) {
+            startHandAnims();
+            layout = (RelativeLayout) findViewById(R.id.dragLayout);
+            layout.setVisibility(View.VISIBLE);
+            //for å unngå crash når det er kun 1 sprsm i listen
 
-        nextBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try { //putter index og score i en JSON og så i en JSONarray
-                    JSONObject obj = new JSONObject();
-                    obj.put("index",index);
-                    obj.put("score",i);
-                    answersArray.put(obj);
-                    // Toast.makeText(DragActivity.this, "", Toast.LENGTH_SHORT).show();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-                index++;
-                innholdTxt.setText(question.get(q));
-                if (q == 0){
-                    innholdTxt.setText(question.get(1));
-                    if (question.size() > 1) {
-                        q = 1;
+
+
+            if (q == question.size() - 1) {
+                doneBtn.setText("Done");
+            }
+
+            /*
+            nextBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try { //putter index og score i en JSON og så i en JSONarray
+                        JSONObject obj = new JSONObject();
+                        obj.put("index", index);
+                        obj.put("score", i);
+                        answersArray.put(obj);
+                        Log.e("Exception", answersArray.toString());
+                        // Toast.makeText(DragActivity.this, "", Toast.LENGTH_SHORT).show();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    index++;
+                    innholdTxt.setText(question.get(q).getQuestion());
+                    if (q == 0) {
+                        innholdTxt.setText(question.get(q).getQuestion());
+                        if (question.size() > 1) {
+                            q = 1;
+                        }
+                    }
+                    questionList.add("" + i);
+                    if (q < question.size()) {
+                        i = 2;
+                        layout.setVisibility(View.GONE);
+                        startFadeAnims();
+                        generateQuestions();
+                        q++;
+                    }
+                    if (q == question.size()) {
+                        q = question.size();
+                        nextBtn.setVisibility(View.GONE);
+                        doneBtn.setVisibility(View.VISIBLE);
                     }
                 }
-                questionList.add(""+i);
-                if (q < question.size()){
-                    i = 2;
-                    startFadeAnims();
-                    q++;
-                }
-                if (q == question.size()){
-                    q = question.size();
-                    nextBtn.setVisibility(View.GONE);
-                    doneBtn.setVisibility(View.VISIBLE);
-                }
-            }
-        });
+            });
 
-        doneBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try { //putter index og score i en JSON og så i en JSONarray
-                    JSONObject obj = new JSONObject();
-                    obj.put("index",index);
-                    obj.put("score",i);
-                    answersArray.put(obj);
-                    Log.e("Exception", answersArray.toString());
-                } catch (JSONException e) {
-                    e.printStackTrace();
+            doneBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try { //putter index og score i en JSON og så i en JSONarray
+                        JSONObject obj = new JSONObject();
+                        obj.put("index", index);
+                        obj.put("score", i);
+                        answersArray.put(obj);
+                        Log.e("Exception", answersArray.toString());
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    questionList.add("" + i);
+                    storeDataTwo(id, questionList);
+                    storeData(id + "," + questionList);
+                    storeScore((50 * question.size()));
+                    Cords.getInstance().setLatitude(null);
+                    Cords.getInstance().setLatitude(null);
+                    NotificationManager notificationManager = (NotificationManager)
+                            getSystemService(Context.
+                                    NOTIFICATION_SERVICE);
+                    notificationManager.cancelAll();
+                    finish();
                 }
-                questionList.add(""+i);
-                storeDataTwo(id,questionList);
-                storeData(id + "," + questionList);
-                storeScore((50*question.size()));
-                Cords.getInstance().setLatitude(null);
-                Cords.getInstance().setLatitude(null);
-                NotificationManager notificationManager = (NotificationManager)
-                        getSystemService(Context.
-                                NOTIFICATION_SERVICE);
-                notificationManager.cancelAll();
-                finish();
+            });
+            */
+        } else if (question.get(q).getType().equals("flervalg")) {
+            layout = (RelativeLayout) findViewById(R.id.multiplechoiceLayout);
+            layout.setVisibility(View.VISIBLE);
+
+            LinearLayout row1 = (LinearLayout) findViewById(R.id.choicesRow1);
+            LinearLayout row2 = (LinearLayout) findViewById(R.id.choicesRow2);
+            LinearLayout row3 = (LinearLayout) findViewById(R.id.choicesRow3);
+
+            Button btn = (Button) findViewById(R.id.choice1Btn);
+            Button btn2 = (Button) findViewById(R.id.choice2Btn);
+            Button btn3 = (Button) findViewById(R.id.choice3Btn);
+            Button btn4 = (Button) findViewById(R.id.choice4Btn);
+            Button btn5 = (Button) findViewById(R.id.choice5Btn);
+            Button btn6 = (Button) findViewById(R.id.choice6Btn);
+
+            if (question.get(q).getAnswers().size() == 2) {
+                row1.setVisibility(View.INVISIBLE);
+                row2.setVisibility(View.VISIBLE);
+                row3.setVisibility(View.INVISIBLE);
+
+                btn3.setText(question.get(q).getAnswers().get(0));
+                btn4.setText(question.get(q).getAnswers().get(1));
+
+            } else if (question.get(q).getAnswers().size() == 4) {
+                row1.setVisibility(View.INVISIBLE);
+                row2.setVisibility(View.VISIBLE);
+                row3.setVisibility(View.VISIBLE);
+
+                btn3.setText(question.get(q).getAnswers().get(0));
+                btn4.setText(question.get(q).getAnswers().get(1));
+                btn5.setText(question.get(q).getAnswers().get(2));
+                btn6.setText(question.get(q).getAnswers().get(3));
+
+            } else if (question.get(q).getAnswers().size() == 6) {
+                row1.setVisibility(View.VISIBLE);
+                row2.setVisibility(View.VISIBLE);
+                row3.setVisibility(View.VISIBLE);
+
+                btn.setText(question.get(q).getAnswers().get(0));
+                btn2.setText(question.get(q).getAnswers().get(1));
+                btn3.setText(question.get(q).getAnswers().get(2));
+                btn4.setText(question.get(q).getAnswers().get(3));
+                btn5.setText(question.get(q).getAnswers().get(4));
+                btn6.setText(question.get(q).getAnswers().get(5));
             }
-        });
+
+        } else if (question.get(q).getType().equals("text")) {
+            layout = (RelativeLayout) findViewById(R.id.textLayout);
+            layout.setVisibility(View.VISIBLE);
+            Button txtBtn = (Button) findViewById(R.id.textBtn);
+            if (q == question.size() - 1) {
+                txtBtn.setText("Done");
+            }
+        }
+    }
+
+    public void answerBtnClicked(View v) {
+        Button btn = (Button) v;
+        String answer = btn.getText().toString();
+        layout = (RelativeLayout) findViewById(R.id.multiplechoiceLayout);
+        layout.setVisibility(View.GONE);
+        try {
+            JSONObject obj = new JSONObject();
+            obj.put("index", q);
+            obj.put("answer", answer);
+            answersArray.put(obj);
+            Log.e("Exception", "JSON:" + answersArray.toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+        finalizeQuestion();
+    }
+
+    public void dragBtnClicked(View v) {
+        layout = (RelativeLayout) findViewById(R.id.dragLayout);
+        layout.setVisibility(View.GONE);
+        try {
+            JSONObject obj = new JSONObject();
+            obj.put("index", q);
+            obj.put("score", i);
+            answersArray.put(obj);
+            Log.e("Exception", answersArray.toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        finalizeQuestion();
+    }
+
+    public void txtBtnClicked(View v) {
+        Button btn = (Button) v;
+        EditText edtText = (EditText) findViewById(R.id.txtInput);
+        String text = edtText.getText().toString();
+        layout = (RelativeLayout) findViewById(R.id.textLayout);
+        layout.setVisibility(View.GONE);
+        try {
+            JSONObject obj = new JSONObject();
+            obj.put("index", q);
+            obj.put("answer", text);
+            answersArray.put(obj);
+            Log.e("Exception", "JSON:" + answersArray.toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        finalizeQuestion();
+    }
+
+    private void finalizeQuestion() {
+        if (q < question.size() - 1) {
+            q++;
+            generateQuestions();
+        } else {
+            questionList.add("" + i);
+            storeDataTwo(id, questionList);
+            storeData(id + "," + questionList);
+            storeScore((50 * question.size()));
+            Cords.getInstance().setLatitude(null);
+            Cords.getInstance().setLatitude(null);
+            NotificationManager notificationManager = (NotificationManager)
+                    getSystemService(Context.
+                            NOTIFICATION_SERVICE);
+            notificationManager.cancelAll();
+            finish();
+        }
     }
 
     public void storeScore(Integer score) {
@@ -507,7 +651,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
     public void startFadeAnims() {
         innholdTxt.startAnimation(fadeOutAnim);
         smileyImg.startAnimation(fadeOutAnim);
-        //doneBtn.startAnimation(fadeInAnim);
+        // doneBtn.startAnimation(fadeInAnim);
 
         fadeOutAnim.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -557,6 +701,8 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         mGoogleApiClient.disconnect();
         super.onStop();
     }
+
+
 
     //får tak i lengegrad og breddegrad
     @Override
