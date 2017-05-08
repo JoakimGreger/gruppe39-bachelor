@@ -15,7 +15,7 @@ import java.util.HashMap;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private SQLiteDatabase db;
-    public static final String DATABASE_NAME = "CEMLocate.db";
+    public static final String DATABASE_NAME = "CEMLocate2.db";
     private Context context;
 
     public DatabaseHelper(Context context) {
@@ -33,8 +33,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         );
         populateLeaderboard(db);
 
-
-
+        db.execSQL("CREATE TABLE IF NOT EXISTS User (_id INTEGER PRIMARY KEY NOT NULL," +
+                "email VARCHAR(60)," +
+                "username VARCHAR(60)," +
+                "score int default 0," +
+                "answers int default 0," +
+                "loggedIn boolean NOT NULL default 0)");
     }
 
     @Override
@@ -64,6 +68,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             String sql = "SELECT * FROM OfflineLeaderboard";
             return db.rawQuery(sql, null);
         }
+    }
+
+    public void addUser(SQLiteDatabase db, String email, String username, int score, int answers, boolean loggedIn) {
+        String sql = "INSERT INTO User(email, username, score, answers, loggedIn) VALUES(?,?,?,?,?)";
+        SQLiteStatement stmt = db.compileStatement(sql);
+        stmt.bindString(1, email);
+        stmt.bindString(2, username);
+        stmt.bindLong(3, score);
+        stmt.bindLong(4, answers);
+        if (loggedIn) { stmt.bindLong(5, 1); } else {stmt.bindLong(5, 0);};
+        stmt.executeInsert();
+
     }
 
 

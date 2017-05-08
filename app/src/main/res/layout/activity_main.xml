@@ -51,9 +51,9 @@
         android:layout_width="200dp"
         android:layout_height="35dp"
         android:id="@+id/buttonButton"
-        android:layout_below="@+id/imageView"
+        android:layout_below="@+id/loginBtn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp" />
+        android:layout_marginTop="12dp" />
 
     <Button
         android:text="Score"
@@ -65,5 +65,31 @@
         android:layout_below="@+id/buttonButton"
         android:layout_alignStart="@+id/buttonButton"
         android:layout_marginTop="12dp" />
+    <Button
+        android:text="Login"
+        android:textColor="#6393C3"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:id="@+id/loginBtn"
+        android:background="#155965"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_alignStart="@+id/buttonButton"
+        />
+t
+    <Button
+        android:text="Logout"
+        android:textColor="#6393C3"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:id="@+id/logoutBtn"
+        android:background="#155965"
+        android:layout_below="@+id/scoreBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        android:onClick="logoutBtnClicked"
+        android:layout_alignStart="@+id/buttonButton"
+        />
 
 </RelativeLayout>
