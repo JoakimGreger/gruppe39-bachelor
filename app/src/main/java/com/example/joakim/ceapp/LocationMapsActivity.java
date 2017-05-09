@@ -127,9 +127,11 @@ public class LocationMapsActivity extends FragmentActivity implements OnMapReady
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         int hourOfDay = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
-        if (hourOfDay >= 20 || hourOfDay <=4){
+        if (hourOfDay >= 20){
             mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this,R.raw.style_night_json));
-        } if (hourOfDay >= 5 || hourOfDay < 20) {
+        }
+
+        if (hourOfDay >= 5 && hourOfDay < 20) {
             mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this,R.raw.style_day_json));
         }
 
