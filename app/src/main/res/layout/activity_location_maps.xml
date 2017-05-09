@@ -17,15 +17,16 @@
 
     <Button
         android:id="@+id/leaderboardBtn"
+        android:layout_width="120dp"
         android:layout_height="30dp"
-        android:layout_width="30dp"
-        android:background="@color/colorPrimaryDark"
-        android:width="30dp"
-        android:height="30dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="30dp"
         android:layout_marginRight="30dp"
+        android:width="30dp"
+        android:height="30dp"
+        android:textColor="#6393C3"
+        android:background="#155965"
         android:text="Leaderboard" />
     />
 </RelativeLayout>
