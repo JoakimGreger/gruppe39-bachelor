@@ -87,6 +87,8 @@
             >
             <Button
                 android:id="@+id/choice1Btn"
+                android:background="#155965"
+                android:textColor="#6393C3"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
                 android:layout_weight="1"
@@ -95,6 +97,8 @@
                 />
             <Button
                 android:id="@+id/choice2Btn"
+                android:background="#155965"
+                android:textColor="#6393C3"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
                 android:layout_weight="1"
@@ -109,6 +113,8 @@
             android:layout_below="@+id/choicesRow1">
             <Button
                 android:id="@+id/choice3Btn"
+                android:textColor="#6393C3"
+                android:background="#155965"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
                 android:layout_weight="1"
@@ -117,6 +123,8 @@
                 />
             <Button
                 android:id="@+id/choice4Btn"
+                android:textColor="#6393C3"
+                android:background="#155965"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
                 android:layout_weight="1"
@@ -131,6 +139,8 @@
             android:layout_below="@+id/choicesRow2">
             <Button
                 android:id="@+id/choice5Btn"
+                android:background="#155965"
+                android:textColor="#6393C3"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
                 android:layout_weight="1"
@@ -139,6 +149,8 @@
                 />
             <Button
                 android:id="@+id/choice6Btn"
+                android:background="#155965"
+                android:textColor="#6393C3"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
                 android:layout_weight="1"
