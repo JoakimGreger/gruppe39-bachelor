@@ -476,6 +476,9 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         try
         {
             questionAnswers.put("usertestid", id);
+            SharedPreferences pref = this.getSharedPreferences("session_token", Context.MODE_PRIVATE);
+            String email = pref.getString("email", null);
+            questionAnswers.put("email", email);
             questionAnswers.put("answers", answersArray);
         } catch (JSONException e){
             e.printStackTrace();
