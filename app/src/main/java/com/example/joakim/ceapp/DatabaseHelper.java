@@ -15,7 +15,7 @@ import java.util.HashMap;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private SQLiteDatabase db;
-    public static final String DATABASE_NAME = "CEMLocate2.db";
+    public static final String DATABASE_NAME = "CEMLocate3.db";
     private Context context;
 
     public DatabaseHelper(Context context) {
@@ -95,6 +95,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO OfflineLeaderboard(username, answers, score) VALUES" +
                 "('John', 5, 530), " +
                 "('Thea', 11, 1030), " +
+                "('Heidi', 15, 3530), " +
                 "('Fredrik', 22, 3070), " +
                 "('Nora', 24, 3050), " +
                 "('Thomas', 30, 5590), " +

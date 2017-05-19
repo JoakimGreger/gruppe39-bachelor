@@ -221,6 +221,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
         innholdTxt.setText(question.get(q).getQuestion());
         if (question.get(q).getType().equals("stemning")) {
             startHandAnims();
+
             layout = (RelativeLayout) findViewById(R.id.dragLayout);
             layout.setVisibility(View.VISIBLE);
             //for å unngå crash når det er kun 1 sprsm i listen
@@ -371,6 +372,7 @@ DragActivity extends Activity implements GestureDetector.OnGestureListener, Goog
     }
 
     public void dragBtnClicked(View v) {
+        startFadeAnims();
         layout = (RelativeLayout) findViewById(R.id.dragLayout);
         layout.setVisibility(View.GONE);
         try {

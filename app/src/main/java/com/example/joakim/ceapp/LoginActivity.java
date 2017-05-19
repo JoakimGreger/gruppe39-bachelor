@@ -250,12 +250,29 @@ public class LoginActivity extends AppCompatActivity {
 
             HttpURLConnection httpURLConnection = null;
             try {
-                String url = params[0] + "?email=" + emailText + "&username=" + usernameText + "&age=" + ageNumber
-                        + "&gender=" + genderText + "&password=" + passwordText + "&confirmPassword=" + confirmPwText;
-                httpURLConnection = (HttpURLConnection) new URL(url).openConnection();
+                // String url =  + "?email=" + emailText + "&username=" + usernameText + "&age=" + ageNumber
+                //        + "&gender=" + genderText + "&password=" + passwordText + "&confirmPassword=" + confirmPwText;
+                httpURLConnection = (HttpURLConnection) new URL(params[0]).openConnection();
                 httpURLConnection.setRequestMethod("POST");
-                Log.e("Exception", "URL:" + url);
+                Log.e("Exception", "URL:" + params[0]);
                 httpURLConnection.setDoOutput(true);
+
+                JSONObject obj = new JSONObject();
+                obj.put("email", emailText);
+                obj.put("username", usernameText);
+                obj.put("age", (Integer) Integer.parseInt(ageNumber));
+                obj.put("gender", genderText);
+                if (passwordText.equals(confirmPwText)) {
+                    obj.put("password", passwordText);
+                    obj.put("confirm_password", confirmPwText);
+                }
+
+                Log.e("Exception", "JSON:" + obj.toString());
+                DataOutputStream output = new DataOutputStream(httpURLConnection.getOutputStream());
+                output.writeBytes(obj.toString());
+                output.flush();
+                output.close();
+
 
                 InputStream in = httpURLConnection.getInputStream();
                 InputStreamReader inputStreamReader = new InputStreamReader(in);
@@ -265,6 +282,7 @@ public class LoginActivity extends AppCompatActivity {
                     char current = (char) inputStreamData;
                     inputStreamData = inputStreamReader.read();
                     data += current;
+                    Log.e("Exception", "JSON:" + data);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -279,10 +297,8 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
-            Log.e("Exception", result);
             try {
                 JSONObject obj = new JSONObject(result);
-                Log.e("Exception", "UUID:" + obj.getString("UUID"));
                 DatabaseHelper db = new DatabaseHelper(getApplicationContext());
                 //Henter tidliger score hvis den finnes
                 SharedPreferences startscore = getApplicationContext().getSharedPreferences("qScore", Context.MODE_PRIVATE);
@@ -293,15 +309,15 @@ public class LoginActivity extends AppCompatActivity {
 
                 SharedPreferences token = getApplicationContext().getSharedPreferences("session_token", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = token.edit();
-                editor.putString("session_token", obj.getString("UUID"));
-                editor.putString("email", obj.getString("Email"));
+                editor.putString("session_token", obj.getString("uuid"));
+                editor.putString("email", obj.getString("email"));
                 editor.commit();
-
                 db.addUser(db.getWritableDatabase(), obj.getString("Email"), obj.getString("Username"), score, answerAmount, true);
-                finish();
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+
+            finish();
         }
     }
 }
