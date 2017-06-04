@@ -17,6 +17,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import android.location.LocationListener;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
@@ -67,7 +68,8 @@ public class LocationMapsActivity extends FragmentActivity implements OnMapReady
         Criteria criteria = new Criteria();
 
 
-        Button button = (Button) findViewById(R.id.leaderboardBtn);
+        ImageButton button = (ImageButton) findViewById(R.id.leaderboardBtn);
+        button.setImageResource(R.mipmap.ic_leaderboard_btn);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent =  new Intent(LocationMapsActivity.this, ShowLeaderboardActivity.class);
