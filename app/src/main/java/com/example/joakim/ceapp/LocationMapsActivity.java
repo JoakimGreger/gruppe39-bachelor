@@ -63,8 +63,6 @@ public class LocationMapsActivity extends FragmentActivity implements OnMapReady
         markers = new ArrayList<Marker>();
         activeM = new ArrayList<String>();
 
-
-
         lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         Criteria criteria = new Criteria();
 
@@ -144,6 +142,7 @@ public class LocationMapsActivity extends FragmentActivity implements OnMapReady
         mMap.setMinZoomPreference(17);
         mMap.setMaxZoomPreference(17);
         mMap.getUiSettings().setScrollGesturesEnabled(false);
+        mMap.getUiSettings().setMapToolbarEnabled(false);
 
 
         mMap.setOnMarkerClickListener((GoogleMap.OnMarkerClickListener) this);
