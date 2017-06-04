@@ -1,6 +1,9 @@
 package com.example.joakim.ceapp;
 
 import android.database.Cursor;
+import android.graphics.Color;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -25,6 +29,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import static com.example.joakim.ceapp.R.color.button;
+import static com.example.joakim.ceapp.R.color.buttonActive;
 
 public class ShowLeaderboardActivity extends AppCompatActivity {
 
@@ -44,13 +51,12 @@ public class ShowLeaderboardActivity extends AppCompatActivity {
     private ViewPager mViewPager;
     private ArrayList<HashMap<String, Integer>> scoreList;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_leaderboard);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -58,17 +64,9 @@ public class ShowLeaderboardActivity extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
-
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_show_leaderboard, menu);
-        return true;
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -83,6 +81,10 @@ public class ShowLeaderboardActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void changeBtn() {
+
     }
 
     /**
@@ -114,15 +116,26 @@ public class ShowLeaderboardActivity extends AppCompatActivity {
             return fragment;
         }
 
+        @RequiresApi(api = Build.VERSION_CODES.M)
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
 
             View rootView = inflater.inflate(R.layout.fragment_show_leaderboard, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+            // TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             this.type = getArguments().getInt(ARG_SECTION_NUMBER) == 1 ? "Answers" : "Score";
-            textView.setText(type + ":");
+            // textView.setText(type + ":");
             db = new DatabaseHelper(rootView.getContext());
+            Button answersBtn = (Button) rootView.findViewById(R.id.answersBtn);
+            Button scoreBtn = (Button) rootView.findViewById(R.id.scoreBtn);
+            if (type.equals("Answers")) {
+                answersBtn.setBackgroundColor(answersBtn.getResources().getColor(R.color.buttonActive, null));
+                scoreBtn.setBackgroundColor(answersBtn.getResources().getColor(R.color.button, null));
+            } else {
+                answersBtn.setBackgroundColor(answersBtn.getResources().getColor(R.color.button, null));
+                scoreBtn.setBackgroundColor(answersBtn.getResources().getColor(R.color.buttonActive, null));
+            }
+
             Cursor cursor = db.getOfflineLeaderboard(db.getWritableDatabase(), type);
             ListView listView = (ListView) rootView.findViewById(R.id.leaderboardList);
             LeaderboardAdapter adapter = new LeaderboardAdapter(rootView.getContext(), cursor, 0, type);
