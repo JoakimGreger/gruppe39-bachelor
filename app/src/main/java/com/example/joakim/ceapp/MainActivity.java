@@ -116,8 +116,6 @@ public class MainActivity extends AppCompatActivity {
         token = pref.getString("session_token", null);
         email = pref.getString("email", null);
         if (token != null && email != null) {
-            Log.e("Exception", "TOKEN:" + token);
-            Log.e("Exception", "EMAIL:" + email);
             loginBtn.setVisibility(View.GONE);
             logoutBtn = (Button) findViewById(R.id.logoutBtn);
             logoutBtn.setVisibility(View.VISIBLE);

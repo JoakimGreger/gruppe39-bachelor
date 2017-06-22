@@ -83,7 +83,6 @@ public class LocationMapsActivity extends FragmentActivity implements OnMapReady
 
             lm.requestLocationUpdates(provider, 500, 1, this);
             mLastLocation = lm.getLastKnownLocation(provider);
-            //Log.e("Exception", "Location: " + mLastLocation.getLatitude());
         }
 
         /*
